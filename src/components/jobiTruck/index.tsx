@@ -1,7 +1,7 @@
 import { component$ } from "@builder.io/qwik";
 
 import "./index.scss";
-import truckImage from "../../assets/truck.png";
+import truckImage from "../../assets/truck.webp";
 import { WhiteButton } from "../common/buttons/WhiteButton";
 import { GradientSubtitle } from "../common/titles/GradientSubtitle";
 

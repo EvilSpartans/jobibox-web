@@ -1,9 +1,9 @@
 import { component$ } from "@builder.io/qwik";
 
 import "./index.scss";
-import womanImg from "../../assets/woman.png";
-import iaImg from "../../assets/ia.png";
-import jobissimImg from "../../assets/jobissim.png";
+import womanImg from "../../assets/woman.webp";
+import iaImg from "../../assets/ia.webp";
+import jobissimImg from "../../assets/jobissim.webp";
 import { ArrowRight } from "../common/Icons/ArrowRight";
 
 export const Features = component$(() => {

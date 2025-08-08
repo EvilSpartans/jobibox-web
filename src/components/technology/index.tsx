@@ -1,6 +1,6 @@
 import { component$ } from "@builder.io/qwik";
 
-import photo from "../../assets/video-image1.png";
+import photo from "../../assets/video-image1.webp";
 import frame from "../../assets/Frame.svg";
 import { PurpleButton } from "../common/buttons/PurpleButton";
 import { GradientSubtitle } from "../common/titles/GradientSubtitle";

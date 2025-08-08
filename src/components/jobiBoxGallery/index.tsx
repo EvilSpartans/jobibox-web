@@ -1,9 +1,9 @@
 import { component$ } from "@builder.io/qwik";
 
 import "./index.scss";
-import Img1 from "../../assets/carrousel1.png";
-import Img2 from "../../assets/carrousel2.png";
-import Img3 from "../../assets/carrousel3.jpg";
+import Img1 from "../../assets/carrousel1.webp";
+import Img2 from "../../assets/carrousel2.webp";
+import Img3 from "../../assets/carrousel3.webp";
 import { WhiteButton } from "../common/buttons/WhiteButton";
 
 export const JobiGallery = component$(() => {

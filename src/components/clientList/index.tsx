@@ -1,9 +1,9 @@
 import { component$ } from "@builder.io/qwik";
 
 import { PurpleButton } from "../common/buttons/PurpleButton";
-import logoFunRadio from "../../assets/clients/client-fun-radio.png";
+import logoFunRadio from "../../assets/clients/client-fun-radio.webp";
 import { GradientSubtitle } from "../common/titles/GradientSubtitle";
-import logoFranceTravail from "../../assets/clients/client-france-travail.png";
+import logoFranceTravail from "../../assets/clients/client-france-travail.webp";
 
 import "./index.scss";
 

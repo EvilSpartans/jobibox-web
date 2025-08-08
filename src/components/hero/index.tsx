@@ -1,7 +1,7 @@
 import { component$ } from "@builder.io/qwik";
 
 import { ArrowDown } from "../common/Icons/ArrowDown";
-import backgroundImage from "../../assets/background.png";
+import backgroundImage from "../../assets/background.webp";
 import { WhiteButton } from "../common/buttons/WhiteButton";
 
 export const Hero = component$(() => {

@@ -1,11 +1,11 @@
 import { component$ } from "@builder.io/qwik";
 
 import "./index.scss";
-import img1 from "../../assets/profile1.png";
-import img2 from "../../assets/profile2.png";
-import img3 from "../../assets/profile3.png";
+import img1 from "../../assets/profile1.webp";
+import img2 from "../../assets/profile2.webp";
+import img3 from "../../assets/profile3.webp";
 import { WhiteButton } from "../common/buttons/WhiteButton";
-import videoImg from "../../assets/voir les differentes videos.png";
+import videoImg from "../../assets/cvtheque.webp";
 
 export const Recruiter = component$(() => {
   const videos = [

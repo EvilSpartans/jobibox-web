@@ -1,6 +1,6 @@
 import { component$ } from "@builder.io/qwik";
 
-import jobiboxImg from "../../assets/jobibox.png";
+import jobiboxImg from "../../assets/jobibox.webp";
 import { WhiteButton } from "../common/buttons/WhiteButton";
 import { GradientSubtitle } from "../common/titles/GradientSubtitle";
 
