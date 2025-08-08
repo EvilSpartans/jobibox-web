@@ -1,9 +1,9 @@
-import { component$ } from "@builder.io/qwik";
+import { component$, QRL } from "@builder.io/qwik";
 import { ArrowRight } from "../Icons/ArrowRight";
 
 interface WhiteButtonProps {
   label: string;
-  onClick$?: () => void;
+  onClick$?: QRL<() => void>;
 }
 
 export const WhiteButton = component$(
