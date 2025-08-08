@@ -8,9 +8,9 @@ export const Hero = component$(() => {
   return (
     <section
       style="font-family: 'Manrope', sans-serif;"
-      class="mx-4 flex min-h-screen items-center justify-center overflow-hidden"
+      class="flex min-h-screen items-center justify-center overflow-hidden"
     >
-      <div class="mt-6">
+      <div class="relative w-full min-h-screen">
         <img
           src={backgroundImage}
           alt="Background Hero"
@@ -22,7 +22,7 @@ export const Hero = component$(() => {
 
         <div class="absolute inset-0 bg-gradient-to-br from-[#09151B]/80 via-[#2E104EB2] to-[#9456ED]/60"></div>
 
-        <div class="relative z-10 flex min-h-[70vh] flex-col items-center justify-center px-4 text-center sm:px-6">
+        <div class="relative z-10 flex min-h-screen flex-col items-center justify-center px-4 pt-10 pb-12 text-center sm:px-6 sm:pt-16 sm:pb-20 mt-6 mx-4">
           <button class="group mb-6 flex items-center rounded-full border border-white/30 bg-white/20 px-6 py-3 text-white backdrop-blur-sm transition-all duration-300 hover:bg-white/30 sm:px-8 sm:py-4">
             <p class="text-sm text-white/80 sm:text-base md:text-lg">
               Entrez dans la JobiBox et démarquez-vous auprès des recruteurs
