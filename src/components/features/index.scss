@@ -1,0 +1,48 @@
+.features-section {
+  font-family: "Manrope", sans-serif;
+}
+
+.features-subtitle {
+  font-family: "Instrument Serif", serif;
+  background-image: linear-gradient(
+    to right,
+    #feb24c,
+    #ff5c95,
+    #b638cf,
+    #7432f6
+  );
+}
+
+.bg1 {
+  background-image: url("../../assets/background-card-1.png");
+  background-size: cover, cover;
+  background-position: center, center;
+  background-repeat: no-repeat, no-repeat;
+  background-blend-mode: overlay;
+}
+
+.card-overlay {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.bg2 {
+  background-image: url("../../assets/background-card-2.png");
+  background-size: cover, cover;
+  background-position: center, center;
+  background-repeat: no-repeat, no-repeat;
+  background-blend-mode: overlay;
+}
+
+.bg3 {
+  background-image: url("../../assets/background-card-3.png");
+  background-size: cover, cover;
+  background-position: center, center;
+  background-repeat: no-repeat, no-repeat;
+  background-blend-mode: overlay;
+  min-height: 400px;
+}
+
+.img-style {
+  object-fit: contain;
+  object-position: bottom;
+}

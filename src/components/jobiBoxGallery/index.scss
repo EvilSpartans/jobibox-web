@@ -1,0 +1,49 @@
+@keyframes jobigallery-scroll-carousel {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+#jobiGallery {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #4a4199, #753985);
+  padding: 20px 0;
+  font-family: 'Manrope', sans-serif;
+}
+
+.jobiGallery-carousel-container {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+}
+
+.jobiGallery-carousel-track {
+  display: flex;
+  width: max-content;
+  animation: jobigallery-scroll-carousel 40s linear infinite;
+}
+
+.jobiGallery-carousel-item {
+  flex: 0 0 auto;
+  margin-right: 2rem; 
+  transition: transform 0.3s;
+}
+
+.jobiGallery-carousel-item:hover {
+  transform: scale(1.05);
+}
+
+.instrument-serif-italic {
+  font-family: "Instrument Serif", serif;
+  font-weight: 400;
+  font-style: italic;
+  line-height: 100%;
+  letter-spacing: 0%;
+}

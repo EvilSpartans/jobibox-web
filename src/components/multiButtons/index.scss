@@ -1,0 +1,148 @@
+.instrument-serif-italic {
+  font-family: "Instrument Serif", serif;
+  font-weight: 400;
+  font-style: italic;
+  line-height: 100%;
+  letter-spacing: 0%;
+}
+
+.box-title {
+  font-family: 'Manrope', sans-serif;
+  font-size: 45px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 110%;
+  text-align: center;
+  background: linear-gradient(90deg, #A2A2A2 0%, #565656 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  opacity: 0.5;
+
+  @media (max-width: 1024px) {
+    display: none;
+  }
+}
+
+@keyframes fallFromTop {
+  0% {
+    transform: translateY(-100vh) rotate(0deg);
+    opacity: 0;
+  }
+
+  60% {
+    transform: translateY(10px) rotate(5deg);
+    opacity: 1;
+  }
+
+  80% {
+    transform: translateY(-5px) rotate(-2deg);
+  }
+
+  100% {
+    transform: translateY(0px) rotate(0deg);
+    opacity: 1;
+  }
+}
+
+@keyframes gentleFloat {
+
+  0%,
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+
+  50% {
+    transform: translateY(-8px) rotate(1deg);
+  }
+}
+
+@keyframes jumpHover {
+  0% {
+    transform: translateY(0px) scale(1) rotate(0deg);
+  }
+
+  50% {
+    transform: translateY(-15px) scale(1.05) rotate(5deg);
+  }
+
+  100% {
+    transform: translateY(0px) scale(1) rotate(0deg);
+  }
+}
+
+@keyframes jumpClick {
+  0% {
+    transform: translateY(0px) scale(1) rotate(0deg);
+  }
+
+  40% {
+    transform: translateY(-25px) scale(1.1) rotate(10deg);
+  }
+
+  100% {
+    transform: translateY(0px) scale(1) rotate(0deg);
+  }
+}
+
+.button-card {
+  animation: fallFromTop 1.2s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.button-card.floating {
+  animation:
+    fallFromTop 1.2s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards,
+    gentleFloat 4s ease-in-out infinite 1.2s;
+}
+
+.button-card:hover {
+  animation-play-state: paused;
+  animation: jumpHover 0.6s ease-out;
+  filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.3));
+}
+
+.button-card:active {
+  animation: jumpClick 0.4s ease-out;
+}
+
+.fall-delay-1 {
+  animation-delay: 0.4s;
+}
+
+.fall-delay-2 {
+  animation-delay: 0.5s;
+}
+
+.fall-delay-3 {
+  animation-delay: 0.6s;
+}
+
+.fall-delay-4 {
+  animation-delay: 0.7s;
+}
+
+.fall-delay-5 {
+  animation-delay: 0.8s;
+}
+
+.fall-delay-6 {
+  animation-delay: 0.9s;
+}
+
+.fall-delay-7 {
+  animation-delay: 1s;
+}
+
+.fall-delay-8 {
+  animation-delay: 1.1s;
+}
+
+#multiButtons {
+  font-family: "Manrope", sans-serif;
+
+  .button-card {
+    animation-fill-mode: forwards;
+  }
+}

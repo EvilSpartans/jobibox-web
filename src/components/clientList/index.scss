@@ -1,0 +1,40 @@
+.clientList-carousel-row {
+  position: relative;
+  width: 100%;
+}
+
+.clientList-carousel-track {
+  display: flex;
+  gap: 1rem;
+  width: max-content;
+}
+
+.clientList-carousel-item {
+  flex-shrink: 0;
+}
+
+.clientList-carousel-right {
+  animation: scrollRight 40s linear infinite;
+}
+
+.clientList-carousel-left {
+  animation: scrollLeft 40s linear infinite;
+}
+
+@keyframes scrollRight {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes scrollLeft {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}

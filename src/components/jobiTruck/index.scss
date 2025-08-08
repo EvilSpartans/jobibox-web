@@ -1,0 +1,37 @@
+#jobiTruck {
+    font-family: 'Manrope', sans-serif;
+
+    .jobiTruck-bg {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%) rotate(-8deg);
+        z-index: -10;
+        width: 110vw;
+        height: 590px;
+
+        @media (max-width: 768px) {
+            display: none;
+        }
+
+        @media (max-width: 1024px) {
+            width: 150vw;
+            height: 400px;
+        }
+
+        @media (max-width: 1536px) {
+            width: 130vw;
+            height: 500px;
+        }
+
+        @media (min-width: 1800px) {
+            width: 220vw;
+            height: 700px;
+        }
+
+        @media (min-width: 2500px) {
+            width: 260vw;
+            height: 750px;
+        }
+    }
+}

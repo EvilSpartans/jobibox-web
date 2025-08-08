@@ -1,0 +1,39 @@
+@keyframes recruiter-scroll-carousel {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.recruiter-carousel-wrapper {
+  width: 100%;
+  overflow: hidden;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  backdrop-filter: none;
+}
+
+.recruiter-carousel-track {
+  display: flex;
+  flex-wrap: nowrap;
+  width: max-content;
+  animation: recruiter-scroll-carousel 30s linear infinite;
+
+  &:hover {
+    animation-play-state: paused;
+  }
+}
+
+.recruiter-carousel-item {
+  margin: 0 0.5rem;
+  height: 18rem; /* h-72 (desktop) */
+  width: 15rem;  /* w-60 (desktop) */
+
+  @media (max-width: 768px) {
+    height: 10rem; /* h-40 */
+    width: 9rem;   /* w-36 */
+  }
+}
