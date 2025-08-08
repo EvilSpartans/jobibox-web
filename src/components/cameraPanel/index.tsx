@@ -1,9 +1,9 @@
 import { component$, useSignal } from "@builder.io/qwik";
 
 import imageGirl from "../../assets/woman.webp";
-import card1 from "../../assets/rectangle1.webp";
-import card2 from "../../assets/rectangle2.webp";
-import card3 from "../../assets/rectangle3.webp";
+import card1 from "../../assets/rectangle1.avif";
+import card2 from "../../assets/rectangle2.avif";
+import card3 from "../../assets/rectangle3.avif";
 
 import "./index.scss";
 

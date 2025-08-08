@@ -1,4 +1,4 @@
-import { component$ } from "@builder.io/qwik";
+import { component$, useVisibleTask$ } from "@builder.io/qwik";
 import { useDocumentHead, useLocation } from "@builder.io/qwik-city";
 
 /**
@@ -8,6 +8,15 @@ export const RouterHead = component$(() => {
   const head = useDocumentHead();
   const loc = useLocation();
 
+  useVisibleTask$(() => {
+    const links = document.querySelectorAll(
+      'link[rel="stylesheet"][media="print"]',
+    );
+    links.forEach((link) => {
+      (link as HTMLLinkElement).media = "all";
+    });
+  });
+
   return (
     <>
       <title>{head.title}</title>
@@ -15,13 +24,23 @@ export const RouterHead = component$(() => {
       <link rel="canonical" href={loc.url.href} />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="shortcut icon" href="/favicon.png" type="image/png" />
+
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossOrigin="anonymous"
+      />
+
+      <link
+        rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital,wght@0,400;1,400&display=swap"
-        rel="stylesheet"
-      ></link>
+        media="print"
+      />
       <link
-        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap"
         rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap"
+        media="print"
       />
 
       {head.meta.map((m) => (

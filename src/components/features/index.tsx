@@ -3,7 +3,7 @@ import { component$ } from "@builder.io/qwik";
 import "./index.scss";
 import womanImg from "../../assets/woman.webp";
 import iaImg from "../../assets/ia.webp";
-import jobissimImg from "../../assets/jobissim.webp";
+import jobissimImg from "../../assets/jobissim.avif";
 import { ArrowRight } from "../common/Icons/ArrowRight";
 
 export const Features = component$(() => {
