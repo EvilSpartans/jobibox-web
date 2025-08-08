@@ -1,5 +1,4 @@
 import { component$ } from "@builder.io/qwik";
-import "./index.scss";
 
 export const FindJobiBox = component$(() => {
   return (

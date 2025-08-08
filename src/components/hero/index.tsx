@@ -1,6 +1,5 @@
 import { component$ } from "@builder.io/qwik";
 
-import "./index.scss";
 import { ArrowDown } from "../common/Icons/ArrowDown";
 import backgroundImage from "../../assets/background.png";
 import { WhiteButton } from "../common/buttons/WhiteButton";
@@ -9,7 +8,7 @@ export const Hero = component$(() => {
   return (
     <section
       style="font-family: 'Manrope', sans-serif;"
-      class="mx-4 flex min-h-screen items-center justify-center"
+      class="mx-4 flex min-h-screen items-center justify-center overflow-hidden"
     >
       <div class="mt-6">
         <img
@@ -49,12 +48,11 @@ export const Hero = component$(() => {
             </p>
           </div>
 
-          <WhiteButton
-            label="Découvrir la jobibox"
-            onClick$={() => console.log("Clic!")}
-          />
+          <a href="#jobibox">
+            <WhiteButton label="Découvrir la jobibox" />
+          </a>
 
-          <div class="mt-8 flex animate-bounce flex-col items-center text-xs text-white sm:text-lg">
+          <div class="mt-8 mb-0 flex animate-bounce flex-col items-center text-xs text-white sm:text-lg">
             <p class="mb-2">Scroll pour découvrir la jobibox</p>
             <ArrowDown />
           </div>

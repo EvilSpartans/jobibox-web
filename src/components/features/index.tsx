@@ -1,33 +1,12 @@
-import { component$, useSignal, $ } from "@builder.io/qwik";
+import { component$ } from "@builder.io/qwik";
 
 import "./index.scss";
-import { CVVideoModal } from "./CvVideoModal";
 import womanImg from "../../assets/woman.png";
 import iaImg from "../../assets/ia.png";
 import jobissimImg from "../../assets/jobissim.png";
 import { ArrowRight } from "../common/Icons/ArrowRight";
-import { InterviewModal } from "./InterviewModal";
-import { JobModal } from "./JobModal";
 
 export const Features = component$(() => {
-  const isModalCvVideoOpen = useSignal(false);
-
-  const closeCvModal = $(() => {
-    isModalCvVideoOpen.value = false;
-  });
-
-  const isModalInterviewOpen = useSignal(false);
-
-  const closeInterviewModal = $(() => {
-    isModalInterviewOpen.value = false;
-  });
-
-  const isModalJobOpen = useSignal(false);
-
-  const closeJobModal = $(() => {
-    isModalJobOpen.value = false;
-  });
-
   return (
     <>
       <section
@@ -48,10 +27,7 @@ export const Features = component$(() => {
           </div>
 
           <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            <button
-              // onClick$={() => (isModalCvVideoOpen.value = true)}
-              class="bg1 group relative transform overflow-hidden rounded-3xl p-6 text-left text-white shadow-xl transition-all duration-300 hover:-translate-y-2 hover:scale-[1.02] hover:shadow-2xl"
-            >
+            <button class="bg1 group relative transform overflow-hidden rounded-3xl p-6 text-left text-white shadow-xl transition-all duration-300 hover:-translate-y-2 hover:scale-[1.02] hover:shadow-2xl">
               <div class="card-overlay absolute inset-0 transition-all duration-300 group-hover:bg-black/5"></div>
               <div class="relative z-10 flex h-full flex-col">
                 <div class="mb-4 flex items-center justify-between">
@@ -71,15 +47,13 @@ export const Features = component$(() => {
                     decoding="async"
                     src={womanImg}
                     class="img-style h-auto w-full rounded-b-3xl object-contain"
+                    alt="feature"
                   />
                 </div>
               </div>
             </button>
 
-            <button
-              // onClick$={() => (isModalInterviewOpen.value = true)}
-              class="bg2 group relative transform overflow-hidden rounded-3xl p-6 text-left text-white shadow-xl transition-all duration-300 hover:-translate-y-2 hover:scale-[1.02] hover:shadow-2xl"
-            >
+            <button class="bg2 group relative transform overflow-hidden rounded-3xl p-6 text-left text-white shadow-xl transition-all duration-300 hover:-translate-y-2 hover:scale-[1.02] hover:shadow-2xl">
               <div class="card-overlay absolute inset-0 transition-all duration-300 group-hover:bg-black/5"></div>
               <div class="relative z-10 flex h-full flex-col">
                 <div class="mb-4 flex items-center justify-between">
@@ -106,16 +80,14 @@ export const Features = component$(() => {
                       decoding="async"
                       src={iaImg}
                       class="img-style h-auto w-full rounded-b-3xl object-contain"
+                      alt="simulation"
                     />
                   </div>
                 </div>
               </div>
             </button>
 
-            <button
-              // onClick$={() => (isModalInterviewOpen.value = true)}
-              class="bg3 group relative transform overflow-hidden rounded-3xl p-6 text-left text-white shadow-xl transition-all duration-300 hover:-translate-y-2 hover:scale-[1.02] hover:shadow-2xl"
-            >
+            <button class="bg3 group relative transform overflow-hidden rounded-3xl p-6 text-left text-white shadow-xl transition-all duration-300 hover:-translate-y-2 hover:scale-[1.02] hover:shadow-2xl">
               <div class="card-overlay absolute inset-0 transition-all duration-300 group-hover:bg-black/5"></div>
               <div class="relative z-10 flex h-full flex-col">
                 <div class="mb-4 flex items-center justify-between">
@@ -135,6 +107,7 @@ export const Features = component$(() => {
                       decoding="async"
                       src={jobissimImg}
                       class="img-style h-auto w-full rounded-b-3xl object-contain"
+                      alt="job"
                     />
                   </div>
                 </div>
@@ -143,12 +116,6 @@ export const Features = component$(() => {
           </div>
         </div>
       </section>
-
-      {isModalCvVideoOpen.value && <CVVideoModal onClose={closeCvModal} />}
-      {isModalInterviewOpen.value && (
-        <InterviewModal onClose={closeInterviewModal} />
-      )}
-      {isModalJobOpen.value && <JobModal onClose={closeJobModal} />}
     </>
   );
 });

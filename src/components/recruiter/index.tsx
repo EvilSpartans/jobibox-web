@@ -21,21 +21,20 @@ export const Recruiter = component$(() => {
   ];
 
   return (
-<section
-  id="recruiter"
-  class="flex min-h-screen flex-col justify-center items-center bg-gradient-to-b from-[#4a4199] to-[#753985] px-6 pb-40 text-white"
-  style="font-family: 'Manrope', sans-serif;"
->
-
+    <section
+      id="recruiter"
+      class="flex min-h-screen flex-col items-center justify-center bg-gradient-to-b from-[#4a4199] to-[#753985] px-6 pb-40 text-white"
+      style="font-family: 'Manrope', sans-serif;"
+    >
       <div class="mx-auto max-w-7xl px-8 text-center">
-        <h1 class="mb-6 text-3xl md:text-6xl font-semibold">
+        <h1 class="mb-6 text-3xl font-semibold md:text-6xl">
           Augmentez votre visibilité
         </h1>
-        <h1 class="instrument-serif-italic mb-6 text-4xl md:text-6xl font-semibold">
+        <h1 class="instrument-serif-italic mb-6 text-4xl font-semibold md:text-6xl">
           auprès des recruteurs
         </h1>
 
-        <p class="mb-4 text-xl md:text-2xl text-purple-200 font-light">
+        <p class="mb-4 text-xl font-light text-purple-200 md:text-2xl">
           Avec Jobissim, votre CV vidéo est directement visible sur Jobibox. Les
           recruteurs vous découvrent en quelques secondes, avec votre
           personnalité et vos compétences.
@@ -52,14 +51,15 @@ export const Recruiter = component$(() => {
       <div class="relative w-full max-w-7xl px-8">
         <img
           src={videoImg}
-          class="w-full max-h-[500px] object-contain rounded-2xl"
+          class="hidden max-h-[500px] w-full rounded-2xl object-contain md:block"
           loading="lazy"
           decoding="async"
+          alt="cvtheque"
         />
 
         {/* Slider superposé */}
-        <div class="absolute -bottom-24 left-1/2 z-10 w-full max-w-7xl -translate-x-1/2 px-8">
-          <div class="recruiter-carousel-wrapper rounded-xl shadow-2xl ring-1 ring-white/10 bg-transparent">
+        <div class="relative z-10 w-full max-w-7xl px-8 md:absolute md:-bottom-24 md:left-1/2 md:-translate-x-1/2">
+          <div class="recruiter-carousel-wrapper rounded-xl bg-transparent shadow-2xl ring-1 ring-white/10">
             <div class="recruiter-carousel-track">
               {[...videos, ...videos].map((video, index) => (
                 <div
@@ -72,6 +72,7 @@ export const Recruiter = component$(() => {
                       decoding="async"
                       src={video.image}
                       class="h-full w-full object-cover"
+                      alt="slider profile"
                     />
                   </div>
 

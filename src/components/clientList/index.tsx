@@ -63,6 +63,7 @@ export const ClientList = component$(() => {
                           height={40}
                           src={client.logo}
                           class="rounded-sm border border-[#E7E5E9]"
+                          alt="client"
                         />
                         <span class="text-xs font-medium text-[#2E104E]">
                           {client.name}
