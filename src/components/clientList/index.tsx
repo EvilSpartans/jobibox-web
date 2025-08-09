@@ -21,7 +21,7 @@ export const ClientList = component$(() => {
     <section
       id="technology"
       style="font-family: 'Manrope', sans-serif;"
-      class="flex min-h-screen items-center justify-center px-4 sm:px-6"
+      class="flex min-h-screen items-center justify-center px-4 sm:px-6 py-8 lg:py-0"
     >
       <div class="flex w-full max-w-7xl flex-col-reverse items-center justify-between gap-10 rounded-3xl bg-[#EEF0FC] px-4 py-8 sm:px-6 md:px-8 lg:flex-row lg:gap-16">
         <div class="w-full text-center lg:w-1/2 lg:text-left">

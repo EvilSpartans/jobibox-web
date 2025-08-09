@@ -10,7 +10,7 @@ export const Technology = component$(() => {
     <section
       id="technology"
       style="font-family: 'Manrope', sans-serif;"
-      class="flex min-h-screen items-center justify-center px-4 sm:px-6"
+      class="flex min-h-screen items-center justify-center px-4 sm:px-6 py-8 lg:py-0"
     >
       <div class="flex w-full max-w-7xl flex-col-reverse items-center justify-between gap-10 rounded-3xl bg-[#EEF0FC] px-4 py-8 sm:px-6 md:px-8 lg:flex-row lg:gap-16">
         <div class="w-full text-center lg:w-1/2 lg:text-left">
@@ -40,7 +40,7 @@ export const Technology = component$(() => {
             loading="lazy"
             decoding="async"
             alt="Vidéo démonstration Jobibox"
-            class="h-160 w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg object-cover"
+            class="h-80 lg:h-160 w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg object-cover"
           />
 
           <div class="absolute top-1/2 left-1/2 flex h-[135px] w-[135px] -translate-x-1/2 -translate-y-1/2 cursor-pointer items-center justify-center rounded-full bg-[#2E104E] transition-all duration-300 ease-in-out hover:bg-[#6626AA]">

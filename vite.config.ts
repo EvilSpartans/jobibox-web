@@ -12,7 +12,8 @@ const { dependencies = {}, devDependencies = {} } = pkg as any as {
 };
 errorOnDuplicatesPkgDeps(devDependencies, dependencies);
 
-export default defineConfig(({ command, mode }): UserConfig => {
+export default defineConfig((configEnv): UserConfig => {
+  const { command, mode } = configEnv;
   return {
     plugins: [
       qwikCity(),
@@ -31,6 +32,16 @@ export default defineConfig(({ command, mode }): UserConfig => {
     preview: {
       headers: {
         "Cache-Control": "public, max-age=600",
+      },
+    },
+    css: {
+      preprocessorOptions: {
+        scss: {
+          api: 'modern-compiler',
+        },
+        sass: {
+          api: 'modern-compiler',
+        },
       },
     },
   };

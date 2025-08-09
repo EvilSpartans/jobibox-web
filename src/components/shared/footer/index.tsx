@@ -2,21 +2,13 @@ import { component$ } from "@builder.io/qwik";
 
 export const Footer = component$(() => {
   return (
-    <footer class="mt-16 bg-[#09151B] px-6 py-10 font-medium text-white">
+    <footer class="bg-[#09151B] px-6 py-10 font-medium text-white">
       <div class="mx-auto flex max-w-7xl flex-col items-center justify-between gap-6 md:flex-row">
         {/* Logo JobiBox */}
         <div class="text-3xl text-white">JobiBox</div>
 
         {/* Liens */}
         <ul class="flex flex-wrap justify-center gap-6">
-          <li>
-            <a
-              href="#jobibox"
-              class="transition-colors duration-200 hover:text-[#9456ED]"
-            >
-              La JobiBox
-            </a>
-          </li>
           <li>
             <a
               href="#features"
@@ -57,14 +49,14 @@ export const Footer = component$(() => {
               JobiTruck
             </a>
           </li>
-          <li>
+          {/* <li>
             <a
               href="#faq"
               class="transition-colors duration-200 hover:text-[#9456ED]"
             >
               FAQ
             </a>
-          </li>
+          </li> */}
         </ul>
       </div>
 

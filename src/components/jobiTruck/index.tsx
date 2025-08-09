@@ -43,7 +43,8 @@ export const JobiTruck = component$(() => {
       </div>
 
       <div
-        class="relative flex h-[400px] w-full max-w-7xl items-center overflow-hidden rounded-[30px] md:h-[500px] lg:h-[600px]"
+        class="relative flex h-[700px] md:h-[500px] lg:h-[600px] w-full max-w-7xl items-center overflow-hidden rounded-[30px]"
+
         style={`background-image: linear-gradient(270deg, rgba(46, 16, 78, 0) 0%, #2E104E 70.74%), url(${truckImage}); background-size: cover; background-position: right center; background-repeat: no-repeat;`}
       >
         <div class="relative z-10 flex h-full w-full flex-col justify-center p-6 md:p-8 lg:w-1/2 lg:p-12 xl:p-16">

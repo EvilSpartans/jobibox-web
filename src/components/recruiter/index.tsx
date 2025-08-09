@@ -23,7 +23,7 @@ export const Recruiter = component$(() => {
   return (
     <section
       id="recruiter"
-      class="flex min-h-screen flex-col items-center justify-center bg-gradient-to-b from-[#4a4199] to-[#753985] px-6 pb-40 text-white"
+      class="flex min-h-screen flex-col items-center justify-center bg-gradient-to-b from-[#4a4199] to-[#753985] px-6 py-8 text-white md:py-8 lg:py-0 lg:pb-40"
       style="font-family: 'Manrope', sans-serif;"
     >
       <div class="mx-auto max-w-7xl px-8 text-center">
@@ -44,7 +44,9 @@ export const Recruiter = component$(() => {
       <div class="mb-12">
         <WhiteButton
           label="Découvrir Jobissim"
-          onClick$={() => console.log("Clic!")}
+          onClick$={() => {
+            window.open("https://jobissim.com", "_blank");
+          }}
         />
       </div>
 

@@ -1,7 +1,7 @@
 import { component$ } from "@builder.io/qwik";
 
-import mapImgDesktop from "../../assets/map2.webp";
-import mapImgMobile from "../../assets/map.webp";
+import mapImgDesktop from "../../assets/map2.avif";
+import mapImgMobile from "../../assets/map.avif";
 import { PurpleButton } from "../common/buttons/PurpleButton";
 import { GradientSubtitle } from "../common/titles/GradientSubtitle";
 
