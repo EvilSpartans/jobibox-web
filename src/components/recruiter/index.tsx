@@ -1,9 +1,9 @@
 import { component$ } from "@builder.io/qwik";
 
 import "./index.scss";
-import img1 from "../../assets/profile1.webp";
-import img2 from "../../assets/profile2.webp";
-import img3 from "../../assets/profile3.webp";
+import img1 from "../../assets/profile1.avif";
+import img2 from "../../assets/profile2.avif";
+import img3 from "../../assets/profile3.avif";
 import { WhiteButton } from "../common/buttons/WhiteButton";
 import videoImg from "../../assets/cvtheque.webp";
 

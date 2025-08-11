@@ -22,14 +22,14 @@ export const Navbar = component$(() => {
     >
       <div class="text-3xl text-white">JobiBox</div>
       <button
-        class="text-2xl text-white focus:outline-none md:hidden"
+        class="text-2xl text-white focus:outline-none lg:hidden"
         onClick$={() => (isOpen.value = !isOpen.value)}
         aria-label="Ouvrir le menu"
       >
         {isOpen.value ? "✖" : "☰"}
       </button>
 
-      <ul class="hidden flex-wrap items-center gap-6 font-medium text-white md:flex">
+      <ul class="hidden flex-wrap items-center gap-6 font-medium text-white lg:flex">
         <li>
           <a href="#features" class="hover:text-[#9456ED]">
             Fonctionnalité
@@ -62,12 +62,12 @@ export const Navbar = component$(() => {
         </li>
       </ul>
 
-      <a href="#jobibox" class="hidden md:flex">
+      <a href="#jobibox" class="hidden lg:flex">
         <WhiteButton label="Découvrir la jobibox" />
       </a>
 
       {isOpen.value && (
-        <div class="fixed top-0 right-0 z-50 h-full w-64 bg-white p-6 shadow-lg transition-transform duration-300 md:hidden">
+        <div class="fixed top-0 right-0 z-50 h-full w-64 bg-white p-6 shadow-lg transition-transform duration-300 lg:hidden">
           <div class="mb-4 flex justify-end">
             <button
               class="mb-4 text-xl text-[#2E104E] focus:outline-none"
@@ -79,11 +79,6 @@ export const Navbar = component$(() => {
           </div>
 
           <ul class="flex flex-col gap-4 font-medium text-[#2E104E]">
-            <li>
-              <a href="#jobibox" class="hover:text-[#9456ED]">
-                La JobiBox
-              </a>
-            </li>
             <li>
               <a href="#features" class="hover:text-[#9456ED]">
                 Fonctionnalité
@@ -109,11 +104,11 @@ export const Navbar = component$(() => {
                 JobiTruck
               </a>
             </li>
-            <li>
+            {/* <li>
               <a href="#faq" class="hover:text-[#9456ED]">
                 FAQ
               </a>
-            </li>
+            </li> */}
             <li>
               <a href="#jobibox">
                 <WhiteButton label="Découvrir la jobibox" />

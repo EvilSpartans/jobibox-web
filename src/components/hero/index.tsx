@@ -17,6 +17,8 @@ export const Hero = component$(() => {
           width="1920"
           height="1080"
           class="absolute inset-0 h-full w-full object-cover"
+          fetchPriority="high"
+          decoding="async"
           loading="eager"
         />
 

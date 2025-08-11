@@ -1,7 +1,7 @@
 import { component$ } from "@builder.io/qwik";
 
 import "./index.scss";
-import truckImage from "../../assets/truck.webp";
+import truckImage from "../../assets/truck.avif";
 import { WhiteButton } from "../common/buttons/WhiteButton";
 import { GradientSubtitle } from "../common/titles/GradientSubtitle";
 
@@ -43,7 +43,7 @@ export const JobiTruck = component$(() => {
       </div>
 
       <div
-        class="relative flex h-[700px] md:h-[500px] lg:h-[600px] w-full max-w-7xl items-center overflow-hidden rounded-[30px]"
+        class="relative flex h-[700px] md:h-[700px] lg:h-[700px] w-full max-w-7xl items-center overflow-hidden rounded-[30px]"
 
         style={`background-image: linear-gradient(270deg, rgba(46, 16, 78, 0) 0%, #2E104E 70.74%), url(${truckImage}); background-size: cover; background-position: right center; background-repeat: no-repeat;`}
       >
