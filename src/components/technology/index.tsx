@@ -40,7 +40,7 @@ export const Technology = component$(() => {
             loading="lazy"
             decoding="async"
             alt="Vidéo démonstration Jobibox"
-            class="h-80 lg:h-160 w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg object-cover"
+            class="h-80 md:h-120 lg:h-160 w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg object-cover"
           />
 
           <div class="absolute top-1/2 left-1/2 flex h-[135px] w-[135px] -translate-x-1/2 -translate-y-1/2 cursor-pointer items-center justify-center rounded-full bg-[#2E104E] transition-all duration-300 ease-in-out hover:bg-[#6626AA]">
