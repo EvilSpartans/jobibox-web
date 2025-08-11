@@ -17,7 +17,7 @@ export const ScrollTop = component$(() => {
       onClick$={$(() => {
         window.scrollTo({ top: 0, behavior: "smooth" });
       })}
-      class={`fixed cursor-pointer right-6 bottom-6 z-50 rounded-full bg-[rgb(46,16,78)] p-3 text-white shadow-md transition-all hover:bg-white hover:text-[rgb(46,16,78)] ${
+      class={`fixed right-6 bottom-6 z-50 rounded-full bg-[rgb(46,16,78)] p-3 text-white shadow-md transition-all hover:bg-white hover:text-[rgb(46,16,78)] ${
         showButton.value ? "opacity-100" : "pointer-events-none opacity-0"
       }`}
       aria-label="Remonter en haut"

@@ -1,12 +1,17 @@
-import { component$ } from "@builder.io/qwik";
+import { $, component$, useSignal } from "@builder.io/qwik";
 
 import "./index.scss";
+import { Modal } from "../shared/modal";
 import Img1 from "../../assets/carrousel1.avif";
 import Img2 from "../../assets/carrousel2.avif";
 import Img3 from "../../assets/carrousel3.avif";
+import { ContactForm } from "~/forms/contact.form";
 import { WhiteButton } from "../common/buttons/WhiteButton";
 
 export const JobiGallery = component$(() => {
+  const showModal = useSignal(false);
+  const submitContact = useSignal<null | (() => Promise<void>)>(null);
+
   const carouselItems = [
     {
       src: Img1,
@@ -35,50 +40,74 @@ export const JobiGallery = component$(() => {
   const duplicatedItems = [...carouselItems, ...carouselItems];
 
   return (
-    <section
-      id="jobiGallery"
-      class="flex min-h-screen flex-col items-center bg-gradient-to-b from-[#4a4199] to-[#753985] px-6 py-20 text-white"
-      style="font-family: 'Manrope', sans-serif;"
-    >
-      <h1 class="mb-6 text-center text-3xl font-semibold md:text-6xl">
-        Ils sont déjà <span class="instrument-serif-italic">+300</span> à avoir
-        adopté <br />
-        la <span>JobiBox</span>...{" "}
-        <span class="instrument-serif-italic">Et vous ?</span>
-      </h1>
+    <>
+      <section
+        id="jobiGallery"
+        class="flex min-h-screen flex-col items-center bg-gradient-to-b from-[#4a4199] to-[#753985] px-6 py-20 text-white"
+        style="font-family: 'Manrope', sans-serif;"
+      >
+        <h1 class="mb-6 text-center text-3xl font-semibold md:text-6xl">
+          Ils sont déjà <span class="instrument-serif-italic">+300</span> à
+          avoir adopté <br />
+          la <span>JobiBox</span>...{" "}
+          <span class="instrument-serif-italic">Et vous ?</span>
+        </h1>
 
-      <div class="mb-12">
-        <WhiteButton
-          label=" Obtenir ma jobibox"
-          onClick$={() => console.log("Clic!")}
-        />
-      </div>
-
-      <div class="jobiGallery-carousel-container w-full">
-        <div class="jobiGallery-carousel-track">
-          {duplicatedItems.map((item, index) => (
-            <div
-              key={index}
-              class="jobiGallery-carousel-item relative overflow-hidden rounded-2xl"
-            >
-              <img
-                src={item.src}
-                loading="lazy"
-                decoding="async"
-                alt={item.alt}
-                class="h-64 w-64 object-cover md:h-96 md:w-96"
-              />
-              <div
-                class="absolute bottom-0 left-0 w-full p-4 text-white md:p-6"
-                style={`background: ${item.gradient}`}
-              >
-                <p class="text-sm font-bold md:text-base">{item.title}</p>
-                <p class="text-xs md:text-sm">{item.subtitle}</p>
-              </div>
-            </div>
-          ))}
+        <div class="mb-12">
+          <WhiteButton
+            label=" Obtenir ma jobibox"
+            onClick$={() => (showModal.value = true)}
+          />
         </div>
-      </div>
-    </section>
+
+        <div class="jobiGallery-carousel-container w-full">
+          <div class="jobiGallery-carousel-track">
+            {duplicatedItems.map((item, index) => (
+              <div
+                key={index}
+                class="jobiGallery-carousel-item relative overflow-hidden rounded-2xl"
+              >
+                <img
+                  src={item.src}
+                  loading="lazy"
+                  decoding="async"
+                  alt={item.alt}
+                  class="h-64 w-64 object-cover md:h-96 md:w-96"
+                />
+                <div
+                  class="absolute bottom-0 left-0 w-full p-4 text-white md:p-6"
+                  style={`background: ${item.gradient}`}
+                >
+                  <p class="text-sm font-bold md:text-base">{item.title}</p>
+                  <p class="text-xs md:text-sm">{item.subtitle}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <Modal
+        open={showModal.value}
+        title="Demander une Jobibox"
+        onClose$={() => (showModal.value = false)}
+        onConfirm$={$(() => submitContact.value?.())}
+        confirmLabel="Valider"
+        cancelLabel="Annuler"
+      >
+        <div
+          class="modal-content-scrollable"
+          style="max-height:70vh; overflow-y:auto; padding-right:8px"
+        >
+          <ContactForm
+            onRegisterSubmit$={$((fn) => (submitContact.value = fn))}
+            onValidSubmit$={$((saved) => {
+              console.log("Contact créé :", saved);
+              showModal.value = false;
+            })}
+          />
+        </div>
+      </Modal>
+    </>
   );
 });

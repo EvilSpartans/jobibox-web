@@ -55,11 +55,11 @@ export const Navbar = component$(() => {
             JobiTruck
           </a>
         </li>
-        {/* <li>
+        <li>
           <a href="#faq" class="hover:text-[#9456ED]">
             FAQ
           </a>
-        </li> */}
+        </li>
       </ul>
 
       <a href="#jobibox" class="hidden md:flex">

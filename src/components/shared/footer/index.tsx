@@ -1,89 +1,141 @@
-import { component$ } from "@builder.io/qwik";
+import { $, component$, useSignal } from "@builder.io/qwik";
+
+import "./index.scss";
+import { Modal } from "../modal";
+import { ContactForm } from "~/forms/contact.form";
+import { Youtube } from "~/components/common/Icons/Youtube";
+import { Facebook } from "~/components/common/Icons/Facebook";
+import { Linkedin } from "~/components/common/Icons/Linkedin";
+import { Instagram } from "~/components/common/Icons/Instagram";
+import { PurpleButton } from "~/components/common/buttons/PurpleButton";
 
 export const Footer = component$(() => {
+  const showModal = useSignal(false);
+  const submitContact = useSignal<null | (() => Promise<void>)>(null);
+
   return (
-    <footer class="bg-[#09151B] px-6 py-10 font-medium text-white">
-      <div class="mx-auto flex max-w-7xl flex-col items-center justify-between gap-6 md:flex-row">
-        {/* Logo JobiBox */}
-        <div class="text-3xl text-white">JobiBox</div>
+    <>
+      <footer class="bg1 flex min-h-screen flex-col justify-end">
+        <div class="h-[90%] w-full rounded-t-4xl bg-white px-6 py-12 text-[#2E104E]">
+          <div class="mx-auto grid max-w-7xl grid-cols-1 gap-10 md:grid-cols-4">
+            <div>
+              <h2 class="mb-4 text-2xl font-bold">JobiBox</h2>
+              <p class="text-md mb-6 max-w-xs leading-relaxed">
+                La JobiBox est une cabine insonorisée qui vous permet de créer
+                un CV vidéo pro, seul·e, en quelques minutes grâce à une
+                interface simple et guidée.
+              </p>
+              <PurpleButton
+                label="Obtenir ma Jobibox"
+                onClick$={() => (showModal.value = true)}
+              />
+            </div>
 
-        {/* Liens */}
-        <ul class="flex flex-wrap justify-center gap-6">
-          <li>
-            <a
-              href="#features"
-              class="transition-colors duration-200 hover:text-[#9456ED]"
-            >
-              Fonctionnalité
-            </a>
-          </li>
-          <li>
-            <a
-              href="#technology"
-              class="transition-colors duration-200 hover:text-[#9456ED]"
-            >
-              Technologie
-            </a>
-          </li>
-          <li>
-            <a
-              href="#recruiter"
-              class="transition-colors duration-200 hover:text-[#9456ED]"
-            >
-              Recruteur
-            </a>
-          </li>
-          <li>
-            <a
-              href="#findJobiBox"
-              class="transition-colors duration-200 hover:text-[#9456ED]"
-            >
-              Trouve une JobiBox
-            </a>
-          </li>
-          <li>
-            <a
-              href="#jobiTruck"
-              class="transition-colors duration-200 hover:text-[#9456ED]"
-            >
-              JobiTruck
-            </a>
-          </li>
-          {/* <li>
-            <a
-              href="#faq"
-              class="transition-colors duration-200 hover:text-[#9456ED]"
-            >
-              FAQ
-            </a>
-          </li> */}
-        </ul>
-      </div>
+            <div>
+              <h3 class="mb-4 font-semibold">Jobibox</h3>
+              <ul class="text-md space-y-3">
+                <li>
+                  <a href="#hero" class="hover:text-purple-700">
+                    La jobibox
+                  </a>
+                </li>
+                <li>
+                  <a href="#features" class="hover:text-purple-700">
+                    Fonctionnalité
+                  </a>
+                </li>
+                <li>
+                  <a href="#technology" class="hover:text-purple-700">
+                    Technologie
+                  </a>
+                </li>
+                <li>
+                  <a href="#recruiter" class="hover:text-purple-700">
+                    Recruteur
+                  </a>
+                </li>
+                <li>
+                  <a href="#findJobiBox" class="hover:text-purple-700">
+                    Trouver une jobibox
+                  </a>
+                </li>
+                <li>
+                  <a href="#jobiTruck" class="hover:text-purple-700">
+                    Jobitruk
+                  </a>
+                </li>
+                <li>
+                  <a href="#faq" class="hover:text-purple-700">
+                    FAQ
+                  </a>
+                </li>
+              </ul>
+            </div>
 
-      {/* Mentions légales en dessous */}
-      <div class="mt-8 border-t border-white/10 pt-6 text-center text-white/70">
-<p>{new Date().getFullYear()} JobiBox © Conçue avec 💜 par Jobissim</p>
+            <div>
+              <h3 class="mb-4 font-semibold">Nous contacter</h3>
+              <div class="text-md space-y-3">
+                <a
+                  href="mailto:jobissim@jobissim.com"
+                  class="hover:text-purple-700"
+                >
+                  jobissim@jobissim.com
+                </a>
+                <br />
+                <a href="tel:+33978011185" class="hover:text-purple-700">
+                  +09 78 80 11 85
+                </a>
+              </div>
+            </div>
 
+            <div>
+              <h3 class="mb-4 font-semibold">Nous suivre</h3>
+              <div class="flex gap-3">
+                {[Youtube, Facebook, Linkedin, Instagram].map((Icon, i) => (
+                  <a
+                    key={i}
+                    href="#"
+                    class="flex h-10 w-10 items-center justify-center rounded-full bg-purple-700 text-white hover:bg-purple-800"
+                  >
+                    <Icon />
+                  </a>
+                ))}
+              </div>
+            </div>
+          </div>
 
-        <ul class="mt-4 flex flex-wrap justify-center gap-4">
-          <li>
-            <a
-              href="/legal-notice"
-              class="transition-colors duration-200 hover:text-[#9456ED]"
-            >
-              Mentions légales
-            </a>
-          </li>
-          <li>
-            <a
-              href="/privacy-policy"
-              class="transition-colors duration-200 hover:text-[#9456ED]"
-            >
-              Politique de confidentialité
-            </a>
-          </li>
-        </ul>
-      </div>
-    </footer>
+          <div class="mt-8 px-6">
+            <div class="mx-auto max-w-6xl text-center">
+              <div class="text-7xl tracking-wide sm:text-[300px]">
+                <span class="bg-gradient-to-r from-[#272955] to-[#673986] bg-clip-text text-transparent">
+                  JobiBox
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <Modal
+        open={showModal.value}
+        title="Demander une Jobibox"
+        onClose$={() => (showModal.value = false)}
+        onConfirm$={$(() => submitContact.value?.())}
+        confirmLabel="Valider"
+        cancelLabel="Annuler"
+      >
+        <div
+          class="modal-content-scrollable"
+          style="max-height:70vh; overflow-y:auto; padding-right:8px"
+        >
+          <ContactForm
+            onRegisterSubmit$={$((fn) => (submitContact.value = fn))}
+            onValidSubmit$={$((saved) => {
+              console.log("Contact créé :", saved);
+              showModal.value = false;
+            })}
+          />
+        </div>
+      </Modal>
+    </>
   );
 });
