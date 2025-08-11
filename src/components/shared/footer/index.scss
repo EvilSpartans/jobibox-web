@@ -1,7 +1,13 @@
-.bg1 {
-  background-image: url("../../../assets/background-card-1.webp");
-  background-size: cover, cover;
-  background-position: center, center;
-  background-repeat: no-repeat, no-repeat;
-  background-blend-mode: overlay;
+.bg-footer {
+  background-color: #753985;
+}
+
+.social-icon {
+  border-radius: 100px;
+  background: linear-gradient(180deg, #6626AA 0%, #2E104E 100%), #FFF;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.social-icon:hover {
+  opacity: 0.9;
 }

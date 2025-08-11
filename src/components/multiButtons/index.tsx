@@ -38,7 +38,7 @@ export const MultiButtons = component$(() => {
           <span class="instrument-serif-italic">intégré</span> dans la JobiBox.
         </h1>
 
-        <p class="mb-4 text-xl font-light text-purple-200 sm:mb-0 md:text-2xl">
+        <p class="mb-4 text-xl font-light text-purple-200 sm:mb-0 md:mb-8 md:text-2xl">
           Tout est intégré pour une expérience fluide, sans besoin
           d'installation complexe.
         </p>

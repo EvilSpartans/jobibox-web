@@ -15,8 +15,8 @@ export const Footer = component$(() => {
 
   return (
     <>
-      <footer class="bg1 flex min-h-screen flex-col justify-end">
-        <div class="h-[90%] w-full rounded-t-4xl bg-white px-6 py-12 text-[#2E104E]">
+      <footer class="bg-footer flex flex-col justify-end">
+        <div class="h-[90%] w-full rounded-t-[60px] bg-white px-6 py-12 text-[#2E104E]">
           <div class="mx-auto grid max-w-7xl grid-cols-1 gap-10 md:grid-cols-4">
             <div>
               <h2 class="mb-4 text-2xl font-bold">JobiBox</h2>
@@ -95,7 +95,7 @@ export const Footer = component$(() => {
                   <a
                     key={i}
                     href="#"
-                    class="flex h-10 w-10 items-center justify-center rounded-full bg-purple-700 text-white hover:bg-purple-800"
+                    class="social-icon flex h-10 w-10 items-center justify-center rounded-full text-white hover:opacity-90"
                   >
                     <Icon />
                   </a>
@@ -106,7 +106,7 @@ export const Footer = component$(() => {
 
           <div class="mt-8 px-6">
             <div class="mx-auto max-w-6xl text-center">
-              <div class="text-7xl tracking-wide sm:text-[300px]">
+              <div class="text-4xl tracking-wide sm:text-7xl md:text-[150px] lg:text-[220px] xl:text-[300px]">
                 <span class="bg-gradient-to-r from-[#272955] to-[#673986] bg-clip-text text-transparent">
                   JobiBox
                 </span>

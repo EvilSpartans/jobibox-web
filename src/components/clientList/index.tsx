@@ -28,7 +28,7 @@ export const ClientList = component$(() => {
         style="font-family: 'Manrope', sans-serif;"
         class="flex min-h-screen items-center justify-center px-4 py-8 sm:px-6 lg:py-0"
       >
-        <div class="flex w-full max-w-7xl flex-col-reverse items-center justify-between gap-10 rounded-3xl bg-[#EEF0FC] px-4 py-8 sm:px-6 md:px-8 lg:flex-row lg:gap-16">
+        <div class="flex w-full max-w-7xl min-h-[700px] flex-col-reverse items-center justify-between gap-10 rounded-3xl bg-[#EEF0FC] px-4 py-8 sm:px-6 md:px-8 lg:flex-row lg:gap-16">
           <div class="w-full text-center lg:w-1/2 lg:text-left">
             <h1 class="mb-4 text-2xl leading-tight text-[#2E104E] sm:text-4xl md:text-5xl">
               Ces entreprises
