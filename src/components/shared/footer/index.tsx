@@ -91,13 +91,19 @@ export const Footer = component$(() => {
             <div>
               <h3 class="mb-4 font-semibold">Nous suivre</h3>
               <div class="flex gap-3">
-                {[Youtube, Facebook, Linkedin, Instagram].map((Icon, i) => (
+                {[
+                  { Icon: Youtube, label: "Lien vers YouTube" },
+                  { Icon: Facebook, label: "Lien vers Facebook" },
+                  { Icon: Linkedin, label: "Lien vers LinkedIn" },
+                  { Icon: Instagram, label: "Lien vers Instagram" },
+                ].map(({ Icon, label }, i) => (
                   <a
                     key={i}
                     href="#"
+                    aria-label={label}
                     class="social-icon flex h-10 w-10 items-center justify-center rounded-full text-white hover:opacity-90"
                   >
-                    <Icon />
+                    <Icon aria-hidden="true" />
                   </a>
                 ))}
               </div>

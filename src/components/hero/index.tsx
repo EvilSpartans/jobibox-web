@@ -9,6 +9,7 @@ export const Hero = component$(() => {
     <section
       style="font-family: 'Manrope', sans-serif;"
       class="flex min-h-screen items-center justify-center overflow-hidden"
+      id="hero"
     >
       <div class="relative w-full min-h-screen">
         <img

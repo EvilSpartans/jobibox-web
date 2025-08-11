@@ -20,7 +20,9 @@ export const Navbar = component$(() => {
         isScrolled.value ? "bg-[#09151B] shadow-md" : "bg-transparent"
       } flex items-center justify-between`}
     >
-      <div class="text-3xl text-white">JobiBox</div>
+      <a href="#hero" class="text-3xl text-white">
+        JobiBox
+      </a>
       <button
         class="text-2xl text-white focus:outline-none lg:hidden"
         onClick$={() => (isOpen.value = !isOpen.value)}
