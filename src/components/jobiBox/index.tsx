@@ -1,6 +1,6 @@
 import { $, component$, useSignal } from "@builder.io/qwik";
 
-import jobiboxImg from "../../assets/jobibox.webp";
+import jobiboxImg from "../../assets/jobibox.avif";
 import { WhiteButton } from "../common/buttons/WhiteButton";
 import { GradientSubtitle } from "../common/titles/GradientSubtitle";
 import { Modal } from "../shared/modal";
