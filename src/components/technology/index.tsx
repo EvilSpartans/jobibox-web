@@ -1,16 +1,21 @@
-import { component$ } from "@builder.io/qwik";
+import { $, component$, useSignal } from "@builder.io/qwik";
 
-import photo from "../../assets/video-image1.webp";
+import { Modal } from "../shared/modal";
 import frame from "../../assets/Frame.svg";
+import { ContactForm } from "~/forms/contact.form";
+import photo from "../../assets/video-image1.webp";
 import { PurpleButton } from "../common/buttons/PurpleButton";
 import { GradientSubtitle } from "../common/titles/GradientSubtitle";
 
 export const Technology = component$(() => {
+  const showModal = useSignal(false);
+  const submitContact = useSignal<null | (() => Promise<void>)>(null);
+
   return (
     <section
       id="technology"
       style="font-family: 'Manrope', sans-serif;"
-      class="flex min-h-screen items-center justify-center px-4 sm:px-6 py-8 lg:py-0"
+      class="flex min-h-screen items-center justify-center px-4 py-8 sm:px-6 lg:py-0"
     >
       <div class="flex w-full max-w-7xl flex-col-reverse items-center justify-between gap-10 rounded-3xl bg-[#EEF0FC] px-4 py-8 sm:px-6 md:px-8 lg:flex-row lg:gap-16">
         <div class="w-full text-center lg:w-1/2 lg:text-left">
@@ -29,7 +34,7 @@ export const Technology = component$(() => {
           <div class="flex justify-center lg:justify-start">
             <PurpleButton
               label="Obtenir une jobibox"
-              onClick$={() => console.log("Clic!")}
+              onClick$={() => (showModal.value = true)}
             />
           </div>
         </div>
@@ -40,13 +45,35 @@ export const Technology = component$(() => {
             loading="lazy"
             decoding="async"
             alt="Vidéo démonstration Jobibox"
-            class="h-80 md:h-120 lg:h-160 w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg object-cover"
+            class="h-80 w-full max-w-xs object-cover sm:max-w-sm md:max-w-md lg:h-160 lg:max-w-lg"
           />
 
           <div class="absolute top-1/2 left-1/2 flex h-[135px] w-[135px] -translate-x-1/2 -translate-y-1/2 cursor-pointer items-center justify-center rounded-full bg-[#2E104E] transition-all duration-300 ease-in-out hover:bg-[#6626AA]">
             <img src={frame} alt="Lecture" class="h-full w-full p-8" />
           </div>
         </div>
+
+        <Modal
+          open={showModal.value}
+          title="Demander une Jobibox"
+          onClose$={() => (showModal.value = false)}
+          onConfirm$={$(() => submitContact.value?.())}
+          confirmLabel="Valider"
+          cancelLabel="Annuler"
+        >
+          <div
+            class="modal-content-scrollable"
+            style="max-height:70vh; overflow-y:auto; padding-right:8px"
+          >
+            <ContactForm
+              onRegisterSubmit$={$((fn) => (submitContact.value = fn))}
+              onValidSubmit$={$((saved) => {
+                console.log("Contact créé :", saved);
+                showModal.value = false;
+              })}
+            />
+          </div>
+        </Modal>
       </div>
     </section>
   );

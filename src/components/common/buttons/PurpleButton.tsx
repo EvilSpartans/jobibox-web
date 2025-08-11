@@ -11,7 +11,7 @@ export const PurpleButton = component$(
     return (
       <button
         onClick$={onClick$}
-        class="group flex cursor-pointer items-center space-x-3 rounded-full border border-white/30 bg-[#2E104E] px-6 py-3 text-base text-white backdrop-blur-sm transition-all duration-300 hover:bg-[#6626AA] sm:px-8 sm:py-4 sm:text-lg"
+        class="group flex items-center space-x-3 rounded-full border border-white/30 bg-[#2E104E] px-6 py-3 text-base text-white backdrop-blur-sm transition-all duration-300 hover:bg-[#6626AA] sm:px-8 sm:py-4 sm:text-lg"
       >
         <span> {label}</span>
         <div class="rounded-full bg-white/50 p-2 transition-colors group-hover:bg-white/40">

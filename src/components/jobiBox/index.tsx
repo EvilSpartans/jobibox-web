@@ -1,10 +1,10 @@
 import { $, component$, useSignal } from "@builder.io/qwik";
 
+import { Modal } from "../shared/modal";
 import jobiboxImg from "../../assets/jobibox.avif";
+import { ContactForm } from "~/forms/contact.form";
 import { WhiteButton } from "../common/buttons/WhiteButton";
 import { GradientSubtitle } from "../common/titles/GradientSubtitle";
-import { Modal } from "../shared/modal";
-import { ContactForm } from "~/forms/contact.form";
 
 export const JobiBox = component$(() => {
   const showModal = useSignal(false);

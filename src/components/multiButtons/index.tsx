@@ -38,15 +38,17 @@ export const MultiButtons = component$(() => {
           <span class="instrument-serif-italic">intégré</span> dans la JobiBox.
         </h1>
 
-        <p class="text-xl font-light text-purple-200 mb-4 sm:mb-0 md:mb-8 md:text-2xl">
+        <p class="mb-4 text-xl font-light text-purple-200 sm:mb-0 md:text-2xl">
           Tout est intégré pour une expérience fluide, sans besoin
           d'installation complexe.
         </p>
       </div>
 
       <div class="relative px-4 sm:px-8">
-        <div class="mx-auto h-auto sm:h-[800px] max-w-7xl rounded-t-[125px] bg-gradient-to-r from-[#09151B] to-[#321B53] pt-20 shadow-2xl sm:rounded-t-[250px]">
-                    <h2 class="box-title absolute top-10 left-1/2 transform -translate-x-1/2 text-white">Votre JobiBox</h2>
+        <div class="mx-auto h-auto max-w-7xl rounded-t-[125px] bg-gradient-to-r from-[#09151B] to-[#321B53] pt-20 shadow-2xl sm:h-[600px] sm:rounded-t-[250px]">
+          <h2 class="box-title absolute top-10 left-1/2 -translate-x-1/2 transform text-white">
+            Votre JobiBox
+          </h2>
           <div class="flex h-full flex-wrap items-end justify-center gap-6 p-4">
             <div class="button-card fall-delay-1 w-full max-w-[16rem] transform rounded-[12px] bg-gradient-to-r from-pink-500 to-purple-500 px-8 py-4 shadow-lg sm:max-w-[18rem] sm:-translate-x-4 sm:-translate-y-6 sm:rotate-[-20deg]">
               <div class="flex items-center space-x-2">
