@@ -173,6 +173,7 @@
     right: -55px;
     transform: rotate(-15deg);
   }
+
   .card-top-left {
     position: absolute;
     top: 25%;
@@ -297,27 +298,27 @@
     }
 
     .card-top-left {
-      top: 3%;
-      left: -15%;
-      transform: rotate(-30deg);
+      top: 15%;
+      left: 0%;
+      transform: rotate(0deg);
     }
 
     .card-top-right {
       top: 25%;
-      right: -35%;
-      transform: rotate(50deg);
+      right: -10%;
+      transform: rotate(0deg);
     }
 
     .card-bottom-left {
       bottom: 12%;
-      left: -25%;
-      transform: rotate(-30deg);
+      left: -10%;
+      transform: rotate(0deg);
     }
 
     .card-bottom-right {
       bottom: 5%;
-      right: -20%;
-      transform: rotate(35deg);
+      right: -10%;
+      transform: rotate(0deg);
     }
   }
 }
