@@ -81,62 +81,68 @@ export const Navbar = component$(() => {
         <WhiteButton label="Découvrir la jobibox" />
       </a>
 
-         <div
-        class={`mobile-navbar fixed top-0 right-0 z-50 h-full w-64 bg-white shadow-lg transform transition-transform duration-300 ease-in-out lg:hidden ${
+      <div
+        class={`mobile-navbar fixed top-0 right-0 z-50 h-full w-64 transform bg-white shadow-lg transition-transform duration-300 ease-in-out lg:hidden ${
           isOpen.value ? "translate-x-0" : "translate-x-full"
         }`}
       >
-          <div class="bg-gradient-to-b from-[#4a4199] to-[#753985] p-5 sm:p-7">
-            <button
-              type="button"
-              aria-label="Fermer le menu"
-              class="absolute top-3 right-3 rounded-md bg-[#2E104E] p-2 text-white focus:outline-none"
-              onClick$={() => (isOpen.value = false)}
-            >
-              ✕
-            </button>
+        <div class="bg-gradient-to-b from-[#4a4199] to-[#753985] p-5 sm:p-7">
+          <button
+            type="button"
+            aria-label="Fermer le menu"
+            class="absolute top-3 right-3 rounded-md bg-[#2E104E] p-2 text-white focus:outline-none"
+            onClick$={() => (isOpen.value = false)}
+          >
+            ✕
+          </button>
 
-            <h3 class="mb-3 pr-8 text-2xl text-white">JobiBox</h3>
-          </div>
-
-          <ul class="flex flex-col gap-4 p-5 font-medium text-[#2E104E]">
-            <li>
-              <a href="#features" class="hover:text-[#9456ED]">
-                Fonctionnalité
-              </a>
-            </li>
-            <li>
-              <a href="#technology" class="hover:text-[#9456ED]">
-                Technologie
-              </a>
-            </li>
-            <li>
-              <a href="#recruiter" class="hover:text-[#9456ED]">
-                Recruteur
-              </a>
-            </li>
-            <li>
-              <a href="#findJobiBox" class="hover:text-[#9456ED]">
-                Trouve une JobiBox
-              </a>
-            </li>
-            <li>
-              <a href="#jobiTruck" class="hover:text-[#9456ED]">
-                JobiTruck
-              </a>
-            </li>
-            <li>
-              <a href="#faq" class="hover:text-[#9456ED]">
-                FAQ
-              </a>
-            </li>
-          </ul>
-          <div class="ml-2">
-            <a href="#jobibox">
-              <PurpleButton label="Découvrir la jobibox" />
-            </a>
-          </div>
+          <h3 class="mb-3 pr-8 text-2xl text-white">JobiBox</h3>
         </div>
+
+        <ul class="flex flex-col gap-4 p-5 font-medium text-[#2E104E]">
+          <li>
+            <a href="#features" class="hover:text-[#9456ED]">
+              Fonctionnalité
+            </a>
+          </li>
+          <li>
+            <a href="#technology" class="hover:text-[#9456ED]">
+              Technologie
+            </a>
+          </li>
+          <li>
+            <a href="#recruiter" class="hover:text-[#9456ED]">
+              Recruteur
+            </a>
+          </li>
+          <li>
+            <a href="#findJobiBox" class="hover:text-[#9456ED]">
+              Trouve une JobiBox
+            </a>
+          </li>
+          <li>
+            <a href="#jobiTruck" class="hover:text-[#9456ED]">
+              JobiTruck
+            </a>
+          </li>
+          <li>
+            <a href="#faq" class="hover:text-[#9456ED]">
+              FAQ
+            </a>
+          </li>
+        </ul>
+        <div class="ml-2">
+          <PurpleButton
+            label="Découvrir la jobibox"
+            onClick$={() => {
+              document
+                .getElementById("jobibox")
+                ?.scrollIntoView({ behavior: "smooth" });
+              isOpen.value = false;
+            }}
+          />
+        </div>
+      </div>
     </nav>
   );
 });
