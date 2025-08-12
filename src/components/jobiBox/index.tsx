@@ -18,10 +18,7 @@ export const JobiBox = component$(() => {
       >
         <div class="flex w-full max-w-7xl flex-col-reverse items-center justify-between gap-10 lg:flex-row lg:gap-20">
           <div class="w-full text-center text-white lg:w-1/2 lg:text-left">
-            <h1
-              class="mb-4 text-2xl leading-snug font-semibold sm:text-4xl md:text-5xl"
-              style="font-family: 'Manrope', sans-serif;"
-            >
+            <h1 class="mb-4 text-2xl leading-snug font-semibold sm:text-4xl md:text-5xl">
               La Jobibox, bien plus
             </h1>
 
@@ -48,6 +45,8 @@ export const JobiBox = component$(() => {
               decoding="async"
               src={jobiboxImg}
               alt="Jobibox"
+              width="600"
+              height="400"
               class="h-auto w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg"
             />
           </div>

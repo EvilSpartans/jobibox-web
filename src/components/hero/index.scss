@@ -1,0 +1,11 @@
+.hero-bg {
+  background-image: linear-gradient(
+      to bottom right,
+      rgba(9, 21, 27, 0.8),
+      rgba(46, 16, 78, 0.7),
+      rgba(148, 86, 237, 0.6)
+    ),
+    url("../../assets/background.avif");
+  background-size: cover;
+  background-position: center;
+}

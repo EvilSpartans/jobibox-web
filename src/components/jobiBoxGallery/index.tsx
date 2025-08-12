@@ -44,7 +44,6 @@ export const JobiGallery = component$(() => {
       <section
         id="jobiGallery"
         class="flex min-h-screen flex-col items-center bg-gradient-to-b from-[#4a4199] to-[#753985] px-6 py-20 text-white"
-        style="font-family: 'Manrope', sans-serif;"
       >
         <h1 class="mb-6 text-center text-3xl font-semibold md:text-6xl">
           Ils sont déjà <span class="instrument-serif-italic">+300</span> à

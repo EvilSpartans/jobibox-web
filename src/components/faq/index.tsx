@@ -43,7 +43,6 @@ export const Faq = component$(() => {
       <section
         id="faq"
         class="flex min-h-screen flex-col items-center bg-gradient-to-b from-[#4a4199] to-[#753985] px-6 py-20 text-white"
-        style="font-family: 'Manrope', sans-serif;"
       >
         <div class="mx-auto max-w-7xl px-8 pt-10 text-center">
           <h1 class="mb-6 text-center text-3xl font-semibold md:text-6xl">

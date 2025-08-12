@@ -24,7 +24,6 @@ export const Recruiter = component$(() => {
     <section
       id="recruiter"
       class="flex min-h-screen flex-col items-center justify-center bg-gradient-to-b from-[#4a4199] to-[#753985] px-6 py-8 text-white md:py-8 lg:py-0 lg:pb-40"
-      style="font-family: 'Manrope', sans-serif;"
     >
       <div class="mx-auto max-w-7xl px-8 pt-10 text-center">
         <h1 class="my-6 text-3xl font-semibold md:text-6xl">

@@ -1,6 +1,8 @@
 import { component$, useVisibleTask$ } from "@builder.io/qwik";
 import { useDocumentHead, useLocation } from "@builder.io/qwik-city";
 
+import backgroundImage from "../assets/background.avif";
+
 /**
  * The RouterHead component is placed inside of the document `<head>` element.
  */
@@ -33,15 +35,17 @@ export const RouterHead = component$(() => {
       />
 
       <link
-        rel="stylesheet"
+        rel="preload"
         href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital,wght@0,400;1,400&display=swap"
         media="print"
       />
       <link
-        rel="stylesheet"
+        rel="preload"
         href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap"
         media="print"
       />
+
+      <link rel="preload" href={backgroundImage} as="image" />
 
       {head.meta.map((m) => (
         <meta key={m.key} {...m} />

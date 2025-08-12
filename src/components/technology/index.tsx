@@ -14,7 +14,6 @@ export const Technology = component$(() => {
   return (
     <section
       id="technology"
-      style="font-family: 'Manrope', sans-serif;"
       class="flex min-h-screen items-center justify-center px-4 py-8 sm:px-6 lg:py-0"
     >
       <div class="flex w-full max-w-7xl flex-col-reverse items-center justify-between gap-10 rounded-3xl bg-[#EEF0FC] px-4 py-8 sm:px-6 md:px-8 lg:flex-row lg:gap-16">
@@ -49,7 +48,7 @@ export const Technology = component$(() => {
           />
 
           <div class="absolute top-1/2 left-1/2 flex h-[135px] w-[135px] -translate-x-1/2 -translate-y-1/2 cursor-pointer items-center justify-center rounded-full bg-[#2E104E] transition-all duration-300 ease-in-out hover:bg-[#6626AA]">
-            <img src={frame} alt="Lecture" class="h-full w-full p-8" />
+            <img loading="lazy" src={frame} alt="Lecture" class="h-full w-full p-8" />
           </div>
         </div>
 

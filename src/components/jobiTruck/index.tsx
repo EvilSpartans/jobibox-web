@@ -9,7 +9,6 @@ export const JobiTruck = component$(() => {
   return (
     <section
       id="jobiTruck"
-      style="font-family: 'Manrope', sans-serif;"
       class="relative flex min-h-screen items-center justify-center overflow-hidden px-4 py-8"
     >
       <div class="absolute top-0 left-0 -z-10 h-full w-full overflow-hidden">

@@ -12,27 +12,29 @@ import { Question } from "../common/Icons/Question";
 export const CameraPanel = component$(() => {
   const selected = useSignal(0);
 
+  const options = [
+    {
+      title: "Changer le fond",
+      desc: "Choisissez un fond pro, fun ou neutre pour refléter votre style.",
+      icon: <Photo />,
+    },
+    {
+      title: "Modifier les questions",
+      desc: "Sélectionnez les questions que vous souhaitez pour mieux vous présenter.",
+      icon: <Question />,
+    },
+    {
+      title: "Ajoutez vos points forts",
+      desc: "Mettez en avant vos compétences, projets ou traits de personnalité.",
+      icon: <Pin />,
+    },
+  ];
+
   return (
     <section id="cameraPanel" class="camera-panel">
       <div class="content">
         <div class="options">
-          {[
-            {
-              title: "Changer le fond",
-              desc: "Choisissez un fond pro, fun ou neutre pour refléter votre style.",
-              icon: <Photo />,
-            },
-            {
-              title: "Modifier les questions",
-              desc: "Sélectionnez les questions que vous souhaitez pour mieux vous présenter.",
-              icon: <Question />,
-            },
-            {
-              title: "Ajoutez vos points forts",
-              desc: "Mettez en avant vos compétences, projets ou traits de personnalité.",
-              icon: <Pin />,
-            },
-          ].map((item, i) => (
+          {options.map((item, i) => (
             <div
               key={i}
               class={`option-item ${selected.value === i ? "selected" : ""}`}
@@ -51,16 +53,26 @@ export const CameraPanel = component$(() => {
           <div class="camera-mockup">
             <div class="lens"></div>
 
-            <img src={imageGirl} alt="portrait" class="girl-img" />
-            <img src={card1} class="card card1" alt="bg1" />
-            <img src={card2} class="card card2" alt="bg2" />
-            <img src={card3} class="card card3" alt="bg3" />
+            <img
+              loading="eager"
+              src={imageGirl}
+              alt="portrait"
+              class="girl-img"
+            />
+            <img loading="lazy" src={card1} class="card card1" alt="bg1" />
+            <img loading="lazy" src={card2} class="card card2" alt="bg2" />
+            <img loading="lazy" src={card3} class="card card3" alt="bg3" />
           </div>
         ) : selected.value === 1 ? (
           <div class="camera-mockup">
             <div class="lens"></div>
 
-            <img src={imageGirl} alt="portrait" class="girl-img" />
+            <img
+              loading="eager"
+              src={imageGirl}
+              alt="portrait"
+              class="girl-img"
+            />
             <span class="card-text card-top-left">
               Qu'est-ce qui te motive le plus ?
             </span>
@@ -81,7 +93,12 @@ export const CameraPanel = component$(() => {
           <div class="camera-mockup">
             <div class="lens"></div>
 
-            <img src={imageGirl} alt="portrait" class="girl-img" />
+            <img
+              loading="eager"
+              src={imageGirl}
+              alt="portrait"
+              class="girl-img"
+            />
             <span class="card-text card1">💡 Curieux.se</span>
             <span class="card-text card2">💪 Autonome</span>
             <span class="card-text card3">💬 Bonne communication</span>

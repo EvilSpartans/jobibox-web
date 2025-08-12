@@ -1,64 +1,48 @@
 import { component$ } from "@builder.io/qwik";
 
+import "./index.scss";
 import { ArrowDown } from "../common/Icons/ArrowDown";
-import backgroundImage from "../../assets/background.avif";
 import { WhiteButton } from "../common/buttons/WhiteButton";
 
 export const Hero = component$(() => {
   return (
     <section
-      style="font-family: 'Manrope', sans-serif;"
-      class="flex min-h-screen items-center justify-center overflow-hidden"
       id="hero"
+      class="hero-bg relative flex min-h-screen items-center justify-center overflow-hidden"
     >
-      <div class="relative w-full min-h-screen">
-        <img
-          src={backgroundImage}
-          alt="Background Hero"
-          width="1920"
-          height="1080"
-          class="absolute inset-0 h-full w-full object-cover"
-          fetchPriority="high"
-          decoding="async"
-          loading="eager"
-        />
+      <div class="relative z-10 mx-4 flex min-h-screen flex-col items-center justify-center px-4 py-12 text-center sm:px-6 sm:py-16">
+        <button class="group mb-6 flex items-center rounded-full border border-white/30 bg-white/20 px-6 py-3 text-white transition-all duration-300 hover:bg-white/30 sm:px-8 sm:py-4">
+          <p class="text-sm text-white/80 sm:text-base md:text-lg">
+            Entrez dans la JobiBox et démarquez-vous auprès des recruteurs
+          </p>
+        </button>
 
-        <div class="absolute inset-0 bg-gradient-to-br from-[#09151B]/80 via-[#2E104EB2] to-[#9456ED]/60"></div>
+        <div class="mb-8 max-w-4xl">
+          <h1 class="mb-4 text-3xl text-white sm:text-5xl md:text-6xl">
+            Une cabine. Une vidéo
+          </h1>
 
-        <div class="relative z-10 flex min-h-screen flex-col items-center justify-center px-4 pt-10 pb-12 text-center sm:px-6 sm:pt-16 sm:pb-20 mt-6 mx-4">
-          <button class="group mb-6 flex items-center rounded-full border border-white/30 bg-white/20 px-6 py-3 text-white backdrop-blur-sm transition-all duration-300 hover:bg-white/30 sm:px-8 sm:py-4">
-            <p class="text-sm text-white/80 sm:text-base md:text-lg">
-              Entrez dans la JobiBox et démarquez-vous auprès des recruteurs
-            </p>
-          </button>
+          <h2
+            class="mb-8 bg-gradient-to-r from-yellow-400 via-pink-500 to-purple-700 bg-clip-text font-serif text-4xl leading-none font-normal text-transparent italic sm:text-6xl lg:text-7xl xl:text-8xl"
+            style={{ fontFamily: "'Instrument Serif', serif" }}
+          >
+            Une vraie première impression
+          </h2>
 
-          <div class="mb-8">
-            <h1 class="mb-4 text-3xl text-white sm:text-5xl md:text-6xl">
-              Une cabine. Une vidéo
-            </h1>
+          <p class="mx-auto mb-12 max-w-2xl text-sm text-white/80 sm:text-base md:text-lg">
+            La JobiBox est une cabine insonorisée qui vous permet de créer un CV
+            vidéo pro, seul·e, en quelques minutes grâce à une interface simple
+            et guidée.
+          </p>
+        </div>
 
-            <h2
-              class="mb-8 bg-clip-text text-center text-4xl text-transparent sm:text-6xl lg:text-7xl xl:text-8xl"
-              style="font-family: 'Instrument Serif', serif; font-weight: 400; font-style: italic; line-height: 100%; letter-spacing: 0%; background-image: linear-gradient(to right, #FEB24C, #FF5C95, #B638CF, #7432F6);"
-            >
-              Une vraie première impression
-            </h2>
+        <a href="#jobibox">
+          <WhiteButton label="Découvrir la jobibox" />
+        </a>
 
-            <p class="mx-auto mb-12 max-w-2xl text-sm text-white/80 sm:text-base md:text-lg">
-              La JobiBox est une cabine insonorisée qui vous permet de créer un
-              CV vidéo pro, seul·e, en quelques minutes grâce à une interface
-              simple et guidée.
-            </p>
-          </div>
-
-          <a href="#jobibox">
-            <WhiteButton label="Découvrir la jobibox" />
-          </a>
-
-          <div class="mt-8 mb-0 flex animate-bounce flex-col items-center text-xs text-white sm:text-lg">
-            <p class="mb-2">Scroll pour découvrir la jobibox</p>
-            <ArrowDown />
-          </div>
+        <div class="mt-8 flex animate-bounce flex-col items-center text-xs text-white sm:text-lg">
+          <p class="mb-2">Scroll pour découvrir la jobibox</p>
+          <ArrowDown />
         </div>
       </div>
     </section>

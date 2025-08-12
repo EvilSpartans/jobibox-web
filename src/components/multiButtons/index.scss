@@ -7,13 +7,12 @@
 }
 
 .box-title {
-  font-family: 'Manrope', sans-serif;
   font-size: 45px;
   font-style: normal;
   font-weight: 600;
   line-height: 110%;
   text-align: center;
-  background: linear-gradient(90deg, #A2A2A2 0%, #565656 100%);
+  background: linear-gradient(90deg, #a2a2a2 0%, #565656 100%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -46,7 +45,6 @@
 }
 
 @keyframes gentleFloat {
-
   0%,
   100% {
     transform: translateY(0px) rotate(0deg);
@@ -100,7 +98,6 @@
 .button-card:hover {
   animation-play-state: paused;
   animation: jumpHover 0.6s ease-out;
-  filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.3));
 }
 
 .button-card:active {
@@ -140,8 +137,6 @@
 }
 
 #multiButtons {
-  font-family: "Manrope", sans-serif;
-
   .button-card {
     animation-fill-mode: forwards;
   }
