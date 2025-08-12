@@ -11,8 +11,20 @@ export const Navbar = component$(() => {
       isScrolled.value = window.scrollY > 50;
     };
 
+    const handleClickOutside = (event: MouseEvent) => {
+      const sidebar = document.querySelector(".mobile-navbar");
+      if (isOpen.value && sidebar && !sidebar.contains(event.target as Node)) {
+        isOpen.value = false;
+      }
+    };
+
     window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    document.addEventListener("mousedown", handleClickOutside);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
   });
 
   return (
@@ -69,8 +81,11 @@ export const Navbar = component$(() => {
         <WhiteButton label="Découvrir la jobibox" />
       </a>
 
-      {isOpen.value && (
-        <div class="fixed top-0 right-0 z-50 h-full w-64 bg-white shadow-lg transition-transform duration-300 lg:hidden">
+         <div
+        class={`mobile-navbar fixed top-0 right-0 z-50 h-full w-64 bg-white shadow-lg transform transition-transform duration-300 ease-in-out lg:hidden ${
+          isOpen.value ? "translate-x-0" : "translate-x-full"
+        }`}
+      >
           <div class="bg-gradient-to-b from-[#4a4199] to-[#753985] p-5 sm:p-7">
             <button
               type="button"
@@ -122,7 +137,6 @@ export const Navbar = component$(() => {
             </a>
           </div>
         </div>
-      )}
     </nav>
   );
 });
