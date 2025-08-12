@@ -1,4 +1,5 @@
 import { component$, useSignal, useVisibleTask$ } from "@builder.io/qwik";
+import { PurpleButton } from "~/components/common/buttons/PurpleButton";
 import { WhiteButton } from "~/components/common/buttons/WhiteButton";
 
 export const Navbar = component$(() => {
@@ -10,8 +11,20 @@ export const Navbar = component$(() => {
       isScrolled.value = window.scrollY > 50;
     };
 
+    const handleClickOutside = (event: MouseEvent) => {
+      const sidebar = document.querySelector(".mobile-navbar");
+      if (isOpen.value && sidebar && !sidebar.contains(event.target as Node)) {
+        isOpen.value = false;
+      }
+    };
+
     window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    document.addEventListener("mousedown", handleClickOutside);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
   });
 
   return (
@@ -57,30 +70,36 @@ export const Navbar = component$(() => {
             JobiTruck
           </a>
         </li>
-        {/* <li>
+        <li>
           <a href="#faq" class="hover:text-[#9456ED]">
             FAQ
           </a>
-        </li> */}
+        </li>
       </ul>
 
       <a href="#jobibox" class="hidden lg:flex">
         <WhiteButton label="Découvrir la jobibox" />
       </a>
 
-      {isOpen.value && (
-        <div class="fixed top-0 right-0 z-50 h-full w-64 bg-white p-6 shadow-lg transition-transform duration-300 lg:hidden">
-          <div class="mb-4 flex justify-end">
+         <div
+        class={`mobile-navbar fixed top-0 right-0 z-50 h-full w-64 bg-white shadow-lg transform transition-transform duration-300 ease-in-out lg:hidden ${
+          isOpen.value ? "translate-x-0" : "translate-x-full"
+        }`}
+      >
+          <div class="bg-gradient-to-b from-[#4a4199] to-[#753985] p-5 sm:p-7">
             <button
-              class="mb-4 text-xl text-[#2E104E] focus:outline-none"
-              onClick$={() => (isOpen.value = false)}
+              type="button"
               aria-label="Fermer le menu"
+              class="absolute top-3 right-3 rounded-md bg-[#2E104E] p-2 text-white focus:outline-none"
+              onClick$={() => (isOpen.value = false)}
             >
-              ✖
+              ✕
             </button>
+
+            <h3 class="mb-3 pr-8 text-2xl text-white">JobiBox</h3>
           </div>
 
-          <ul class="flex flex-col gap-4 font-medium text-[#2E104E]">
+          <ul class="flex flex-col gap-4 p-5 font-medium text-[#2E104E]">
             <li>
               <a href="#features" class="hover:text-[#9456ED]">
                 Fonctionnalité
@@ -106,19 +125,18 @@ export const Navbar = component$(() => {
                 JobiTruck
               </a>
             </li>
-            {/* <li>
+            <li>
               <a href="#faq" class="hover:text-[#9456ED]">
                 FAQ
               </a>
-            </li> */}
-            <li>
-              <a href="#jobibox">
-                <WhiteButton label="Découvrir la jobibox" />
-              </a>
             </li>
           </ul>
+          <div class="ml-2">
+            <a href="#jobibox">
+              <PurpleButton label="Découvrir la jobibox" />
+            </a>
+          </div>
         </div>
-      )}
     </nav>
   );
 });
