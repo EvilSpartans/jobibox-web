@@ -1,18 +1,18 @@
-import logoFranceTravail from "../assets/clients/client-france-travail.webp";
+import logoFranceTravail from "../assets/clients/france.avif";
 import logoDirectFormation from "../assets/clients/formation.png";
 import logoAssifep from "../assets/clients/assifep.png";
 import logoFunRadio from "../assets/clients/client-fun-radio.webp";
-import logoM6 from "../assets/clients/m6.png";
+import logoM6 from "../assets/clients/m6.avif";
 import campus from "../assets/clients/campus.webp";
-import rcl from "../assets/clients/rcl.png";
+import rcl from "../assets/clients/rcl.avif";
 import crit from "../assets/clients/crit.png";
-import elevup from "../assets/clients/elevup.png";
+import elevup from "../assets/clients/elevup.avif";
 import partnaire from "../assets/clients/partnaire.webp";
 import adelie from "../assets/clients/adelie.png";
 import leclerc from "../assets/clients/leclerc.webp";
 import synergie from "../assets/clients/synergie.webp";
 import actual from "../assets/clients/actual.jpg";
-import laho from "../assets/clients/laho.jpg";
+import laho from "../assets/clients/laho.avif";
 
 export const clientLogos = [
   { name: "Assifep", logo: logoAssifep },
