@@ -3,7 +3,7 @@ import { component$, useSignal } from "@builder.io/qwik";
 import "./index.scss";
 import { Pin } from "../common/Icons/Pin";
 import { Photo } from "../common/Icons/Photo";
-import imageGirl from "../../assets/woman.webp";
+import imageGirl from "../../assets/woman.avif";
 import card1 from "../../assets/rectangle1.avif";
 import card2 from "../../assets/rectangle2.avif";
 import card3 from "../../assets/rectangle3.avif";
