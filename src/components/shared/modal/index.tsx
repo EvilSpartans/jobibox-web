@@ -1,5 +1,4 @@
 import { component$, Slot } from "@builder.io/qwik";
-
 import { Modal as ModalProps } from "~/models/modal";
 
 export const Modal = component$(
@@ -10,7 +9,8 @@ export const Modal = component$(
     onConfirm$,
     cancelLabel = "Annuler",
     confirmLabel = "Valider",
-  }: ModalProps) => {
+    hideActions = false,
+  }: ModalProps & { hideActions?: boolean }) => {
     if (!open) return null;
 
     return (
@@ -46,25 +46,28 @@ export const Modal = component$(
             )}
           </div>
 
-          <div class="text-sm text-[#2E104E] sm:text-base p-5 sm:p-7">
+          <div class="p-5 text-sm text-[#2E104E] sm:p-7 sm:text-base">
             <Slot />
-            <div class="mt-6 flex justify-center gap-3">
-              <button
-                type="button"
-                class="rounded-xl border border-[#E7E5E9] bg-white px-4 py-2 text-sm text-[#2E104E] hover:bg-[#F8F6FE]"
-                onClick$={onClose$}
-              >
-                {cancelLabel}
-              </button>
 
-              <button
-                type="button"
-                class="rounded-xl bg-[#2E104E] px-4 py-2 text-sm text-white hover:bg-[#6626AA]"
-                onClick$={() => onConfirm$?.()}
-              >
-                {confirmLabel}
-              </button>
-            </div>
+            {!hideActions && (
+              <div class="mt-6 flex justify-center gap-3">
+                <button
+                  type="button"
+                  class="rounded-xl border border-[#E7E5E9] bg-white px-4 py-2 text-sm text-[#2E104E] hover:bg-[#F8F6FE]"
+                  onClick$={onClose$}
+                >
+                  {cancelLabel}
+                </button>
+
+                <button
+                  type="button"
+                  class="rounded-xl bg-[#2E104E] px-4 py-2 text-sm text-white hover:bg-[#6626AA]"
+                  onClick$={() => onConfirm$?.()}
+                >
+                  {confirmLabel}
+                </button>
+              </div>
+            )}
           </div>
         </div>
       </div>

@@ -3,7 +3,7 @@ import { component$ } from "@builder.io/qwik";
 import "./index.scss";
 import iaImg from "../../assets/ia.avif";
 import womanImg from "../../assets/woman.webp";
-import jobissimImg from "../../assets/jobissim.avif";
+import jobissimImg from "../../assets/offers.avif";
 import { ArrowRight } from "../common/Icons/ArrowRight";
 
 export const Features = component$(() => {
@@ -16,18 +16,18 @@ export const Features = component$(() => {
         <div class="mx-auto w-full max-w-7xl rounded-3xl bg-[#EEF0FC] px-4 py-12 sm:px-8">
           <div class="mb-16 text-center">
             <h1 class="mb-4 text-3xl text-[#2E104E] sm:text-5xl">
-              Avec Jobibox:
+              Avec JobiBox:
             </h1>
             <h2 class="features-subtitle mb-6 bg-clip-text text-3xl text-transparent italic sm:text-5xl md:text-[80px] md:leading-[1]">
               préparez, postulez, réussissez
             </h2>
             <p class="text-base text-[#2E104E] sm:text-lg">
-              Toutes les fonctionnalités Jobibox réunies en un seul outil
+              Toutes les fonctionnalités JobiBox réunies en un seul outil
             </p>
           </div>
 
           <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            <button class="bg1 group relative transform overflow-hidden rounded-3xl p-6 text-left text-white shadow-xl transition-all duration-300 hover:-translate-y-2 hover:scale-[1.02] hover:shadow-2xl">
+            <div class="bg1 group relative transform overflow-hidden rounded-3xl p-6 text-left text-white shadow-xl transition-all duration-300 hover:-translate-y-2 hover:scale-[1.02] hover:shadow-2xl">
               <div class="card-overlay absolute inset-0 transition-all duration-300 group-hover:bg-black/5"></div>
               <div class="relative z-10 flex h-full flex-col">
                 <div class="mb-4 flex items-center justify-between">
@@ -39,7 +39,7 @@ export const Features = component$(() => {
                 <p class="leading-relaxed text-white/90">
                   Mettez en valeur votre personnalité et vos compétences en
                   enregistrant un CV vidéo percutant, directement depuis la
-                  plateforme.
+                  JobiBox.
                 </p>
                 <div class="mt-auto overflow-hidden">
                   <img
@@ -51,9 +51,9 @@ export const Features = component$(() => {
                   />
                 </div>
               </div>
-            </button>
+            </div>
 
-            <button class="bg2 group relative transform overflow-hidden rounded-3xl p-6 text-left text-white shadow-xl transition-all duration-300 hover:-translate-y-2 hover:scale-[1.02] hover:shadow-2xl">
+            <div class="bg2 group relative transform overflow-hidden rounded-3xl p-6 text-left text-white shadow-xl transition-all duration-300 hover:-translate-y-2 hover:scale-[1.02] hover:shadow-2xl">
               <div class="card-overlay absolute inset-0 transition-all duration-300 group-hover:bg-black/5"></div>
               <div class="relative z-10 flex h-full flex-col">
                 <div class="mb-4 flex items-center justify-between">
@@ -85,9 +85,9 @@ export const Features = component$(() => {
                   </div>
                 </div>
               </div>
-            </button>
+            </div>
 
-            <button class="bg3 group relative transform overflow-hidden rounded-3xl p-6 text-left text-white shadow-xl transition-all duration-300 hover:-translate-y-2 hover:scale-[1.02] hover:shadow-2xl">
+            <div class="bg3 group relative transform overflow-hidden rounded-3xl p-6 text-left text-white shadow-xl transition-all duration-300 hover:-translate-y-2 hover:scale-[1.02] hover:shadow-2xl">
               <div class="card-overlay absolute inset-0 transition-all duration-300 group-hover:bg-black/5"></div>
               <div class="relative z-10 flex h-full flex-col">
                 <div class="mb-4 flex items-center justify-between">
@@ -95,24 +95,26 @@ export const Features = component$(() => {
                   <ArrowRight />
                 </div>
                 <p class="leading-relaxed text-white/90">
-                  Mettez en valeur votre personnalité et vos compétences en
-                  enregistrant un CV vidéo percutant, directement depuis la
-                  plateforme.
+                  Postulez en un clic depuis la JobiBox parmi des milliers
+                  d'offres d'emploi disponibles. Suivez ensuite vos candidatures
+                  directement depuis votre espace Jobissim.
                 </p>
 
                 <div class="mt-auto mb-auto">
-                  <div class="overflow-hidden">
-                    <img
-                      loading="lazy"
-                      decoding="async"
-                      src={jobissimImg}
-                      class="img-style h-auto w-full rounded-b-3xl object-contain"
-                      alt="job"
-                    />
+                  <div class="mt-auto mb-auto">
+                    <div class="overflow-hidden">
+                      <img
+                        loading="lazy"
+                        decoding="async"
+                        src={jobissimImg}
+                        alt="job"
+                        class="h-auto w-full rounded-3xl object-contain object-bottom"
+                      />
+                    </div>
                   </div>
                 </div>
               </div>
-            </button>
+            </div>
           </div>
         </div>
       </section>

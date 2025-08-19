@@ -26,17 +26,17 @@ export const Footer = component$(() => {
                 interface simple et guidée.
               </p>
               <PurpleButton
-                label="Obtenir ma Jobibox"
+                label="Obtenir ma JobiBox"
                 onClick$={() => (showModal.value = true)}
               />
             </div>
 
             <div>
-              <h3 class="mb-4 font-semibold">Jobibox</h3>
+              <h3 class="mb-4 font-semibold">JobiBox</h3>
               <ul class="text-md space-y-3">
                 <li>
                   <a href="#hero" class="hover:text-purple-700">
-                    La jobibox
+                    La JobiBox
                   </a>
                 </li>
                 <li>
@@ -56,7 +56,7 @@ export const Footer = component$(() => {
                 </li>
                 <li>
                   <a href="#findJobiBox" class="hover:text-purple-700">
-                    Trouver une jobibox
+                    Trouver une JobiBox
                   </a>
                 </li>
                 <li>
@@ -92,14 +92,32 @@ export const Footer = component$(() => {
               <h3 class="mb-4 font-semibold">Nous suivre</h3>
               <div class="flex gap-3">
                 {[
-                  { Icon: Youtube, label: "Lien vers YouTube" },
-                  { Icon: Facebook, label: "Lien vers Facebook" },
-                  { Icon: Linkedin, label: "Lien vers LinkedIn" },
-                  { Icon: Instagram, label: "Lien vers Instagram" },
-                ].map(({ Icon, label }, i) => (
+                  {
+                    Icon: Youtube,
+                    label: "Lien vers YouTube",
+                    href: "https://www.youtube.com/channel/UCe3bTBZ22yWlgxArOAgwZEQ",
+                  },
+                  {
+                    Icon: Facebook,
+                    label: "Lien vers Facebook",
+                    href: "https://www.facebook.com/Jobissim/",
+                  },
+                  {
+                    Icon: Linkedin,
+                    label: "Lien vers LinkedIn",
+                    href: "https://fr.linkedin.com/company/jobissim",
+                  },
+                  {
+                    Icon: Instagram,
+                    label: "Lien vers Instagram",
+                    href: "https://www.instagram.com/jobissim/",
+                  },
+                ].map(({ Icon, label, href }, i) => (
                   <a
                     key={i}
-                    href="#"
+                    href={href}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     aria-label={label}
                     class="social-icon flex h-10 w-10 items-center justify-center rounded-full text-white hover:opacity-90"
                   >
@@ -123,7 +141,7 @@ export const Footer = component$(() => {
       </footer>
       <Modal
         open={showModal.value}
-        title="Demander une Jobibox"
+        title="Demander une JobiBox"
         onClose$={() => (showModal.value = false)}
         onConfirm$={$(() => submitContact.value?.())}
         confirmLabel="Valider"

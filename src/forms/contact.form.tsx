@@ -99,7 +99,7 @@ export const ContactForm = component$(
         {/* Téléphone (facultatif) */}
         <div>
           <span class="label mb-1 block text-sm text-[#2E104E]">
-            Téléphone (facultatif)
+            Téléphone
           </span>
           <input
             class={fieldClass}

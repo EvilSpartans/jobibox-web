@@ -16,7 +16,7 @@ export const Faq = component$(() => {
 
   const faqData = [
     {
-      question: "Faut-il prendre rendez-vous pour utiliser la Jobibox ?",
+      question: "Faut-il prendre rendez-vous pour utiliser la JobiBox ?",
       answer:
         "Oui, il est préférable de réserver un créneau à l'avance pour garantir la disponibilité de la cabine. La réservation se fait en ligne en quelques clics, à la date et à l'heure qui vous conviennent.",
     },
@@ -34,7 +34,7 @@ export const Faq = component$(() => {
     {
       question: "Comment récupère-t-on la vidéo une fois enregistrée ?",
       answer:
-        "Une fois votre enregistrement terminé, vous recevrez un lien de téléchargement par email. Vous pourrez également accéder à votre vidéo via votre espace personnel sur la plateforme Jobibox.",
+        "Une fois votre enregistrement terminé, vous recevrez un lien de téléchargement par email. Vous pourrez également accéder à votre vidéo via votre espace personnel sur la plateforme JobiBox.",
     },
   ];
 
@@ -48,11 +48,11 @@ export const Faq = component$(() => {
         <div class="mx-auto max-w-7xl px-8 pt-10 text-center">
           <h1 class="mb-6 text-center text-3xl font-semibold md:text-6xl">
             Une question sur{" "}
-            <span class="instrument-serif-italic">la Jobibox</span>
+            <span class="instrument-serif-italic">la JobiBox</span>
           </h1>
           <p class="mb-4 text-xl font-light text-purple-200 md:text-2xl">
             Toutes les infos qu'il vous faut pour profiter pleinement de votre
-            expérience Jobibox.
+            expérience JobiBox.
           </p>
         </div>
 
@@ -117,7 +117,7 @@ export const Faq = component$(() => {
 
       <Modal
         open={showModal.value}
-        title="Demander une Jobibox"
+        title="Demander une JobiBox"
         onClose$={() => (showModal.value = false)}
         onConfirm$={$(() => submitContact.value?.())}
         confirmLabel="Valider"

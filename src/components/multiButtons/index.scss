@@ -17,7 +17,7 @@
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  opacity: 0.5;
+  opacity: 0.7;
 
   @media (max-width: 1024px) {
     display: none;
@@ -86,15 +86,15 @@
 }
 
 .button-card {
-  animation: fallFromTop 1.2s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
+  animation: fallFromTop 2s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
   cursor: pointer;
   transition: transform 0.2s ease;
 }
 
 .button-card.floating {
   animation:
-    fallFromTop 1.2s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards,
-    gentleFloat 4s ease-in-out infinite 1.2s;
+    fallFromTop 2s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards,
+    gentleFloat 4s ease-in-out infinite 2s;
 }
 
 .button-card:hover {

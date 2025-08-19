@@ -52,12 +52,12 @@ export const JobiTruck = component$(() => {
             <h1 class="mb-2 text-2xl leading-tight font-bold text-white md:text-3xl lg:text-4xl xl:text-5xl">
               Le JobiTruck :
             </h1>
-            <GradientSubtitle text=" la Jobibox vient à vous" />
+            <GradientSubtitle text=" la JobiBox vient à vous" />
           </div>
 
           <div class="mb-8 lg:mb-10">
             <p class="max-w-md text-sm leading-relaxed text-white/90 md:text-base lg:text-lg">
-              Un camion aux couleurs de Jobibox se déplace sur vos événements
+              Un camion aux couleurs de JobiBox se déplace sur vos événements
               avec une cabine ambulante. Sur place, les participants peuvent
               créer leur CV vidéo en direct et découvrir tout un écosystème
               métiers.

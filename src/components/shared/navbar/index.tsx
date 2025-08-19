@@ -11,6 +11,8 @@ export const Navbar = component$(() => {
       isScrolled.value = window.scrollY > 50;
     };
 
+    handleScroll();
+
     const handleClickOutside = (event: MouseEvent) => {
       const sidebar = document.querySelector(".mobile-navbar");
       if (isOpen.value && sidebar && !sidebar.contains(event.target as Node)) {
@@ -78,7 +80,7 @@ export const Navbar = component$(() => {
       </ul>
 
       <a href="#jobibox" class="hidden lg:flex">
-        <WhiteButton label="Découvrir la jobibox" />
+        <WhiteButton label="Découvrir la JobiBox" />
       </a>
 
       <div
@@ -133,7 +135,7 @@ export const Navbar = component$(() => {
         </ul>
         <div class="ml-2">
           <PurpleButton
-            label="Découvrir la jobibox"
+            label="Découvrir la JobiBox"
             onClick$={() => {
               document
                 .getElementById("jobibox")

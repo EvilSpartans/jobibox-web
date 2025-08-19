@@ -4,7 +4,7 @@ interface ModalFindJobiBoxProps {
   isOpen: Signal<boolean>;
 }
 
-export const ModalFindJobiBox = component$<ModalFindJobiBoxProps>(
+export const JobiMap = component$<ModalFindJobiBoxProps>(
   ({ isOpen }) => {
     const selectedRegion = useSignal<string | null>(null);
     const hoveredRegion = useSignal<string | null>(null);
@@ -126,7 +126,7 @@ export const ModalFindJobiBox = component$<ModalFindJobiBoxProps>(
           <div class="rounded-t-xl bg-gradient-to-b from-[#4a4199] to-[#753985] p-4 sm:p-6 md:p-7">
             <div class="flex-1 text-center text-white">
               <h2 class="text-2xl font-bold sm:text-3xl">
-                Trouvez une Jobibox
+                Trouvez une JobiBox
               </h2>
               <p class="mt-2 opacity-90 sm:text-xl">
                 Cliquez sur une région pour voir les villes équipées

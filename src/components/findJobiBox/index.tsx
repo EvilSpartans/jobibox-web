@@ -4,7 +4,7 @@ import mapImgDesktop from "../../assets/map2.avif";
 import mapImgMobile from "../../assets/map.avif";
 import { PurpleButton } from "../common/buttons/PurpleButton";
 import { GradientSubtitle } from "../common/titles/GradientSubtitle";
-import { ModalFindJobiBox } from "~/pages/findJobiBox";
+import { JobiMap } from "~/components/findJobiBox/jobiMap";
 
 export const FindJobiBox = component$(() => {
   const showModal = useSignal(false);
@@ -18,33 +18,33 @@ export const FindJobiBox = component$(() => {
         <div class="flex w-full max-w-7xl flex-col-reverse items-center justify-between gap-12 overflow-hidden rounded-3xl bg-[#EEF0FC] px-4 py-10 sm:px-6 md:px-10 lg:flex-row lg:gap-16">
           <div class="w-full text-center lg:w-1/2 lg:text-left">
             <h1 class="mb-4 text-3xl leading-tight font-semibold text-[#2E104E] sm:text-4xl md:text-5xl">
-              Trouvez une Jobibox
+              Trouvez une JobiBox
             </h1>
 
             <GradientSubtitle text="proche de chez vous" />
 
             <p class="mb-8 text-sm leading-relaxed text-[#2E104E] sm:text-base md:text-lg">
               Vous voulez créer votre CV vidéo en quelques minutes ? Repérez la
-              cabine Jobibox la plus proche de chez vous grâce à notre carte
+              cabine JobiBox la plus proche de chez vous grâce à notre carte
               interactive.
             </p>
 
             <div class="flex justify-center lg:justify-start">
               <PurpleButton
-                label="Trouver une Jobibox près de chez moi"
+                label="Trouver une JobiBox près de chez moi"
                 onClick$={() => (showModal.value = true)}
               />
             </div>
 
             <div class="mt-6 flex flex-wrap items-center justify-center gap-x-4 gap-y-2 sm:justify-start">
               <div class="flex items-center gap-1">
-                <GradientSubtitle text="+150" />
+                <GradientSubtitle text="+100" />
                 <p class="text-base text-[#2E104E] sm:text-lg md:text-xl">
-                  Jobibox
+                  JobiBox
                 </p>
               </div>
               <div class="flex items-center gap-1">
-                <GradientSubtitle text="+25.000" />
+                <GradientSubtitle text="+30.000" />
                 <p class="text-base text-[#2E104E] sm:text-lg md:text-xl">
                   CV vidéo
                 </p>
@@ -69,7 +69,7 @@ export const FindJobiBox = component$(() => {
         </div>
       </section>
 
-      <ModalFindJobiBox isOpen={showModal} />
+      <JobiMap isOpen={showModal} />
     </>
   );
 });

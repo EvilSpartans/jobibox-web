@@ -19,20 +19,30 @@
 }
 
 .jobiGallery-carousel-container {
-  overflow: hidden;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
   width: 100%;
   position: relative;
+  scrollbar-width: none; 
+}
+.jobiGallery-carousel-container::-webkit-scrollbar {
+  display: none; 
 }
 
 .jobiGallery-carousel-track {
   display: flex;
   width: max-content;
-  animation: jobigallery-scroll-carousel 40s linear infinite;
+  animation: jobigallery-scroll-carousel 30s linear infinite;
+}
+
+.jobiGallery-carousel-track.is-paused {
+  animation-play-state: paused;
 }
 
 .jobiGallery-carousel-item {
   flex: 0 0 auto;
-  margin-right: 2rem; 
+  margin-right: 2rem;
   transition: transform 0.3s;
 }
 

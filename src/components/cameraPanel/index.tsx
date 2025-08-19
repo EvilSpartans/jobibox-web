@@ -62,11 +62,11 @@ export const CameraPanel = component$(() => {
 
             <img src={imageGirl} alt="portrait" class="girl-img" />
             <span class="card-text card-top-left">
-              Qu'est-ce qui te motive le plus ?
+              Qu’est-ce qui vous motive le plus ?
             </span>
 
             <span class="card-text card-top-right">
-              Tu préfères travailler seul·e ou en équipe ?
+              Vous préférez travailler seul·e ou en équipe ?
             </span>
 
             <span class="card-text card-bottom-left">
@@ -74,7 +74,7 @@ export const CameraPanel = component$(() => {
             </span>
 
             <span class="card-text card-bottom-right">
-              Quel type de mission rêves-tu de faire ?
+              Quel type de mission rêvez-vous d’accomplir ?
             </span>
           </div>
         ) : (
