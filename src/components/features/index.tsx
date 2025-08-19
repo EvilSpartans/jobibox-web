@@ -2,7 +2,7 @@ import { component$ } from "@builder.io/qwik";
 
 import "./index.scss";
 import iaImg from "../../assets/ia.avif";
-import womanImg from "../../assets/woman.webp";
+import womanImg from "../../assets/woman.avif";
 import jobissimImg from "../../assets/offers.avif";
 import { ArrowRight } from "../common/Icons/ArrowRight";
 
