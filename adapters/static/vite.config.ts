@@ -12,7 +12,7 @@ export default extendConfig(baseConfig, () => {
     },
     plugins: [
       staticAdapter({
-        origin: "https://jobibox.fr",
+        origin: "https://jobibox.fr/",
       }),
     ],
   };
