@@ -12,7 +12,7 @@ export default extendConfig(baseConfig, () => {
     },
     plugins: [
       staticAdapter({
-        origin: "https://test.jobissim.com",
+        origin: "https://jobibox.fr",
       }),
     ],
   };
