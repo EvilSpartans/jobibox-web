@@ -4,6 +4,7 @@ import { ContactForm } from "~/forms/contact.form";
 import frame from "../../assets/Frame.svg";
 import photo from "../../assets/video-image1.webp";
 import video from "../../assets/jobibox.webm";
+import videoMp4 from "../../assets/jobibox.mp4";
 import { PurpleButton } from "../common/buttons/PurpleButton";
 import { GradientSubtitle } from "../common/titles/GradientSubtitle";
 
@@ -13,7 +14,7 @@ export const Technology = component$(() => {
   const videoRef = useSignal<HTMLVideoElement>();
   const submitContact = useSignal<null | (() => Promise<void>)>(null);
 
-    useVisibleTask$(({ track }) => {
+  useVisibleTask$(({ track }) => {
     track(() => showVideoModal.value);
     if (!showVideoModal.value && videoRef.value) {
       videoRef.value.pause();
@@ -94,11 +95,15 @@ export const Technology = component$(() => {
           hideActions
         >
           <video
-            src={video}
             ref={videoRef}
             controls
+            preload="none"
             class="w-full rounded-xl"
-          />
+          >
+            <source src={video} type="video/webm" />
+            <source src={videoMp4} type="video/mp4" />
+            Votre navigateur ne supporte pas la lecture vidéo.
+          </video>
         </Modal>
       </div>
     </section>

@@ -35,11 +35,6 @@ export const Footer = component$(() => {
               <h3 class="mb-4 font-semibold">JobiBox</h3>
               <ul class="text-md space-y-3">
                 <li>
-                  <a href="#hero" class="hover:text-purple-700">
-                    La JobiBox
-                  </a>
-                </li>
-                <li>
                   <a href="#features" class="hover:text-purple-700">
                     Fonctionnalité
                   </a>
@@ -67,6 +62,16 @@ export const Footer = component$(() => {
                 <li>
                   <a href="#faq" class="hover:text-purple-700">
                     FAQ
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://github.com/EvilSpartans/JobiBox/releases/latest"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="hover:text-purple-700"
+                  >
+                    Télécharger
                   </a>
                 </li>
               </ul>

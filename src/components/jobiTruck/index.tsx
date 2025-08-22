@@ -43,8 +43,7 @@ export const JobiTruck = component$(() => {
       </div>
 
       <div
-        class="relative flex h-[700px] md:h-[700px] lg:h-[700px] w-full max-w-7xl items-center overflow-hidden rounded-[30px]"
-
+        class="relative flex h-[700px] w-full max-w-7xl items-center overflow-hidden rounded-[30px] md:h-[700px] lg:h-[700px]"
         style={`background-image: linear-gradient(270deg, rgba(46, 16, 78, 0) 0%, #2E104E 70.74%), url(${truckImage}); background-size: cover; background-position: right center; background-repeat: no-repeat;`}
       >
         <div class="relative z-10 flex h-full w-full flex-col justify-center p-6 md:p-8 lg:w-1/2 lg:p-12 xl:p-16">
@@ -57,10 +56,12 @@ export const JobiTruck = component$(() => {
 
           <div class="mb-8 lg:mb-10">
             <p class="max-w-md text-sm leading-relaxed text-white/90 md:text-base lg:text-lg">
-              Un camion aux couleurs de JobiBox se déplace sur vos événements
-              avec une cabine ambulante. Sur place, les participants peuvent
-              créer leur CV vidéo en direct et découvrir tout un écosystème
-              métiers.
+              Le Jobitruck, c’est la puissance de votre marque employeur en
+              mouvement qui se déplace au plus près de vos publics cibles.
+              Chaque projet est conçu sur mesure : sourcing, redynamisation d’un
+              territoire, valorisation de la marque employeur, accompagnement
+              des publics éloignés de l’emploi… Un dispositif pensé pour tous
+              les acteurs de l’emploi et de la formation
             </p>
           </div>
 

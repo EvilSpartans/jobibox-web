@@ -28,10 +28,10 @@ export const JobiBox = component$(() => {
             <GradientSubtitle text="qu'une simple cabine" />
 
             <p class="mb-8 text-sm leading-relaxed text-white sm:text-base md:text-lg">
-              Une cabine pensée pour connecter talents et recruteurs en toute
-              simplicité. Créez votre CV vidéo ou trouvez un profil en quelques
-              minutes, sans CV papier ni formulaire à rallonge. Tout se passe
-              directement dans la JobiBox, en autonomie.
+              Elle vous filme, fait le montage et vous livre instantanément
+              votre CV vidéo, vos vidéos de recrutement et vos simulations
+              d’entretien ! L’avantage : tout est personnalisable, pour que ça
+              vous ressemble.
             </p>
 
             <div class="flex justify-center lg:justify-start">

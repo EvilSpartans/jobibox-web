@@ -62,19 +62,19 @@ export const CameraPanel = component$(() => {
 
             <img src={imageGirl} alt="portrait" class="girl-img" />
             <span class="card-text card-top-left">
-              Qu’est-ce qui vous motive le plus ?
+              Pouvez-vous vous présenter ?
             </span>
 
             <span class="card-text card-top-right">
-              Vous préférez travailler seul·e ou en équipe ?
+              Pourquoi souhaitez-vous rejoindre Jobissim ?
             </span>
 
             <span class="card-text card-bottom-left">
-              Une compétence cachée à partager ?
+              Quel type de profil recherchez-vous ?
             </span>
 
             <span class="card-text card-bottom-right">
-              Quel type de mission rêvez-vous d’accomplir ?
+              What is your speciality in marketing ?
             </span>
           </div>
         ) : (
