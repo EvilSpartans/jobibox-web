@@ -27,6 +27,7 @@ export const Footer = component$(() => {
               </p>
               <PurpleButton
                 label="Obtenir ma JobiBox"
+                class="text-base whitespace-nowrap sm:mt-12 lg:mt-0"
                 onClick$={() => (showModal.value = true)}
               />
             </div>

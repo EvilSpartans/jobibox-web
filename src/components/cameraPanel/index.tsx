@@ -18,14 +18,14 @@ export const CameraPanel = component$(() => {
         <div class="options">
           {[
             {
-              title: "Changer le fond",
-              desc: "Choisissez un fond pro, fun ou neutre pour refléter votre style.",
-              icon: <Photo />,
-            },
-            {
               title: "Modifier les questions",
               desc: "Sélectionnez les questions que vous souhaitez pour mieux vous présenter.",
               icon: <Question />,
+            },
+            {
+              title: "Changer le fond",
+              desc: "Choisissez un fond pro, fun ou neutre pour refléter votre style.",
+              icon: <Photo />,
             },
             {
               title: "Ajoutez vos points forts",
@@ -52,15 +52,6 @@ export const CameraPanel = component$(() => {
             <div class="lens"></div>
 
             <img src={imageGirl} alt="portrait" class="girl-img" />
-            <img src={card1} class="card card1" alt="bg1" />
-            <img src={card2} class="card card2" alt="bg2" />
-            <img src={card3} class="card card3" alt="bg3" />
-          </div>
-        ) : selected.value === 1 ? (
-          <div class="camera-mockup">
-            <div class="lens"></div>
-
-            <img src={imageGirl} alt="portrait" class="girl-img" />
             <span class="card-text card-top-left">
               Pouvez-vous vous présenter ?
             </span>
@@ -76,6 +67,15 @@ export const CameraPanel = component$(() => {
             <span class="card-text card-bottom-right">
               What is your speciality in marketing ?
             </span>
+          </div>
+        ) : selected.value === 1 ? (
+          <div class="camera-mockup">
+            <div class="lens"></div>
+
+            <img src={imageGirl} alt="portrait" class="girl-img" />
+            <img src={card1} class="card card1" alt="bg1" />
+            <img src={card2} class="card card2" alt="bg2" />
+            <img src={card3} class="card card3" alt="bg3" />
           </div>
         ) : (
           <div class="camera-mockup">

@@ -74,7 +74,7 @@ export const MultiButtons = component$(() => {
             <div class="button-card fall-delay-4 w-full max-w-[16rem] transform rounded-[12px] bg-gradient-to-r from-blue-500 to-cyan-500 px-8 py-4 shadow-lg sm:max-w-[20rem] sm:-rotate-6">
               <div class="flex items-center space-x-2">
                 <Heart />
-                <span class="font-semibold sm:text-xl">FABRICATION FRANÇAISE</span>
+                <span class="font-semibold sm:text-xl">FABRIQUÉ EN FRANCE</span>
               </div>
             </div>
 

@@ -18,7 +18,7 @@ export const ClientList = component$(() => {
         style="font-family: 'Manrope', sans-serif;"
         class="flex min-h-screen items-center justify-center px-4 py-8 sm:px-6 lg:py-0"
       >
-        <div class="flex w-full max-w-7xl min-h-[700px] flex-col-reverse items-center justify-between gap-10 rounded-3xl bg-[#EEF0FC] px-4 py-8 sm:px-6 md:px-8 lg:flex-row lg:gap-16">
+        <div class="flex min-h-[700px] w-full max-w-7xl flex-col-reverse items-center justify-between gap-10 rounded-3xl bg-[#EEF0FC] px-4 py-8 sm:px-6 md:px-8 lg:flex-row lg:gap-16">
           <div class="w-full text-center lg:w-1/2 lg:text-left">
             <h1 class="mb-4 text-2xl leading-tight text-[#2E104E] sm:text-4xl md:text-5xl">
               Ces organismes
@@ -43,34 +43,41 @@ export const ClientList = component$(() => {
           <div class="w-full lg:w-[48%]">
             <div class="relative h-[400px] w-full overflow-hidden rounded-xl bg-[#EEF0FC] px-2">
               <div class="absolute inset-0 flex flex-col justify-between py-2">
-                {Array.from({ length: 5 }).map((_, i) => (
-                  <div
-                    class="clientList-carousel-row h-[64px] overflow-hidden"
-                    key={i}
-                  >
+                {Array.from({ length: 5 }).map((_, i) => {
+                  const rotated = [
+                    ...clientLogos.slice(i),
+                    ...clientLogos.slice(0, i),
+                  ];
+
+                  return (
                     <div
-                      class={`clientList-carousel-track ${i % 2 === 0 ? "clientList-carousel-right" : "clientList-carousel-left"}`}
+                      class="clientList-carousel-row h-[64px] overflow-hidden"
+                      key={i}
                     >
-                      {clientLogos.map((client, index) => (
-                        <div
-                          key={`${i}-${index}`}
-                          class="clientList-carousel-item flex items-center gap-3 rounded-[12px] border border-[#E7E5E9] bg-[#F8F6FE] px-3 py-2"
-                        >
-                          <img
-                            width={40}
-                            height={40}
-                            src={client.logo}
-                            class="rounded-sm border border-[#E7E5E9]"
-                            alt="client"
-                          />
-                          <span class="text-xs font-medium text-[#2E104E]">
-                            {client.name}
-                          </span>
-                        </div>
-                      ))}
+                      <div
+                        class={`clientList-carousel-track ${i % 2 === 0 ? "clientList-carousel-right" : "clientList-carousel-left"}`}
+                      >
+                        {rotated.map((client, index) => (
+                          <div
+                            key={`${i}-${index}`}
+                            class="clientList-carousel-item flex items-center gap-3 rounded-[12px] border border-[#E7E5E9] bg-[#F8F6FE] px-3 py-2"
+                          >
+                            <img
+                              width={40}
+                              height={40}
+                              src={client.logo}
+                              class="rounded-sm border border-[#E7E5E9]"
+                              alt="client"
+                            />
+                            <span class="text-xs font-medium text-[#2E104E]">
+                              {client.name}
+                            </span>
+                          </div>
+                        ))}
+                      </div>
                     </div>
-                  </div>
-                ))}
+                  );
+                })}
               </div>
             </div>
           </div>

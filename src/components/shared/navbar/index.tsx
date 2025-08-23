@@ -84,7 +84,7 @@ export const Navbar = component$(() => {
       </a>
 
       <div
-        class={`mobile-navbar fixed top-0 right-0 z-50 h-full w-64 transform bg-white shadow-lg transition-transform duration-300 ease-in-out lg:hidden ${
+        class={`mobile-navbar fixed top-0 right-0 z-50 h-full w-64 md:w-72 transform bg-white shadow-lg transition-transform duration-300 ease-in-out lg:hidden ${
           isOpen.value ? "translate-x-0" : "translate-x-full"
         }`}
       >
