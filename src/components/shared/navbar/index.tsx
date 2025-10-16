@@ -84,56 +84,113 @@ export const Navbar = component$(() => {
       </a>
 
       <div
-        class={`mobile-navbar fixed top-0 right-0 z-50 h-full w-64 md:w-72 transform bg-white shadow-lg transition-transform duration-300 ease-in-out lg:hidden ${
+        class={`mobile-navbar fixed top-0 right-0 z-50 h-full w-64 transform rounded-l-2xl bg-gradient-to-b from-[#2E104E] via-[#4a4199] to-[#753985] opacity-95 shadow-2xl backdrop-blur-md transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] hover:opacity-100 md:w-80 lg:hidden ${
           isOpen.value ? "translate-x-0" : "translate-x-full"
         }`}
       >
-        <div class="bg-gradient-to-b from-[#4a4199] to-[#753985] p-5 sm:p-7">
+        <div class="relative flex items-center justify-between border-b border-white/20 p-6">
+          <h3 class="text-2xl font-semibold tracking-wide text-white">
+            JobiBox
+          </h3>
           <button
             type="button"
             aria-label="Fermer le menu"
-            class="absolute top-3 right-3 rounded-md bg-[#2E104E] p-2 text-white focus:outline-none"
+            class="rounded-full bg-white/10 p-2 text-white backdrop-blur-md transition hover:bg-white/20 focus:outline-none"
             onClick$={() => (isOpen.value = false)}
           >
             ✕
           </button>
-
-          <h3 class="mb-3 pr-8 text-2xl text-white">JobiBox</h3>
         </div>
 
-        <ul class="flex flex-col gap-4 p-5 font-medium text-[#2E104E]">
+        <ul class="flex flex-col gap-5 p-6 text-lg font-medium text-white/90">
           <li>
-            <a href="#features" class="hover:text-[#9456ED]">
+            <a
+              href="#features"
+              onClick$={() => {
+                document
+                  .getElementById("features")
+                  ?.scrollIntoView({ behavior: "smooth" });
+                isOpen.value = false;
+              }}
+              class="transition-all duration-200 hover:translate-x-1 hover:text-white"
+            >
               Fonctionnalité
             </a>
           </li>
           <li>
-            <a href="#technology" class="hover:text-[#9456ED]">
+            <a
+              href="#technology"
+              onClick$={() => {
+                document
+                  .getElementById("technology")
+                  ?.scrollIntoView({ behavior: "smooth" });
+                isOpen.value = false;
+              }}
+              class="transition-all duration-200 hover:translate-x-1 hover:text-white"
+            >
               Technologie
             </a>
           </li>
           <li>
-            <a href="#recruiter" class="hover:text-[#9456ED]">
+            <a
+              href="#recruiter"
+              onClick$={() => {
+                document
+                  .getElementById("recruiter")
+                  ?.scrollIntoView({ behavior: "smooth" });
+                isOpen.value = false;
+              }}
+              class="transition-all duration-200 hover:translate-x-1 hover:text-white"
+            >
               Recruteur
             </a>
           </li>
           <li>
-            <a href="#findJobiBox" class="hover:text-[#9456ED]">
+            <a
+              href="#findJobiBox"
+              onClick$={() => {
+                document
+                  .getElementById("findJobiBox")
+                  ?.scrollIntoView({ behavior: "smooth" });
+                isOpen.value = false;
+              }}
+              class="transition-all duration-200 hover:translate-x-1 hover:text-white"
+            >
               Trouve une JobiBox
             </a>
           </li>
           <li>
-            <a href="#jobiTruck" class="hover:text-[#9456ED]">
+            <a
+              href="#jobiTruck"
+              onClick$={() => {
+                document
+                  .getElementById("jobiTruck")
+                  ?.scrollIntoView({ behavior: "smooth" });
+                isOpen.value = false;
+              }}
+              class="transition-all duration-200 hover:translate-x-1 hover:text-white"
+            >
               JobiTruck
             </a>
           </li>
           <li>
-            <a href="#faq" class="hover:text-[#9456ED]">
+            <a
+              href="#faq"
+              onClick$={() => {
+                document
+                  .getElementById("faq")
+                  ?.scrollIntoView({ behavior: "smooth" });
+                isOpen.value = false;
+              }}
+              class="transition-all duration-200 hover:translate-x-1 hover:text-white"
+            >
               FAQ
             </a>
           </li>
         </ul>
+
         <div class="ml-2">
+          {" "}
           <PurpleButton
             label="Découvrir la JobiBox"
             onClick$={() => {
@@ -142,7 +199,7 @@ export const Navbar = component$(() => {
                 ?.scrollIntoView({ behavior: "smooth" });
               isOpen.value = false;
             }}
-          />
+          />{" "}
         </div>
       </div>
     </nav>
