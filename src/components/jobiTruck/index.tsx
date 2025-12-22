@@ -68,7 +68,9 @@ export const JobiTruck = component$(() => {
           <div>
             <WhiteButton
               label="En savoir plus"
-              onClick$={() => console.log("Clic!")}
+              onClick$={() =>
+                window.open("https://jobitruck.lovable.app/", "_blank")
+              }
             />
           </div>
         </div>
