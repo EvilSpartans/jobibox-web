@@ -1,0 +1,90 @@
+.content-panel {
+  font-family: "Manrope", sans-serif;
+  background-image: url("../../assets/background-card-2.webp");
+  background-size: cover, cover;
+  background-position: center, center;
+  background-repeat: no-repeat, no-repeat;
+  background-blend-mode: overlay;
+}
+
+.steps-flow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
+}
+
+.step {
+  position: relative;
+  text-align: center;
+  padding: 1.5rem;
+  width: 400px;
+  border-radius: 16px;
+  transition: all 0.35s ease;
+  cursor: default;
+  color: white;
+
+  h3 {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
+}
+
+.step-index {
+  display: inline-flex;
+  height: 42px;
+  width: 42px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  background: linear-gradient(135deg, #a855f7, #ec4899);
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.step-details {
+  margin-top: 1rem;
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  color: #e9d5ff;
+  transition: all 0.35s ease;
+}
+
+.step:hover {
+  margin-top: 20px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+
+  .step-details {
+    opacity: 1;
+    max-height: 120px;
+  }
+
+  .step-image {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.step-image {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  object-fit: contain; // garante que mostra tudo
+  margin: 1rem auto;
+  display: none;
+  opacity: 0;
+  transition:
+    opacity 0.35s ease,
+    transform 0.35s ease;
+  transform: translateY(10px);
+}

@@ -10,9 +10,10 @@ import { Navbar } from "~/components/shared/navbar";
 import { Technology } from "~/components/technology";
 import { ClientList } from "~/components/clientList";
 import { FindJobiBox } from "~/components/findJobiBox";
-import { MultiButtons } from "~/components/multiButtons";
-import { JobiGallery } from "~/components/jobiBoxGallery";
 import { CameraPanel } from "~/components/cameraPanel";
+import { MultiButtons } from "~/components/multiButtons";
+import { IASimulation } from "~/components/IASimulation";
+import { JobiGallery } from "~/components/jobiBoxGallery";
 
 export const Home = component$(() => {
   return (
@@ -21,7 +22,12 @@ export const Home = component$(() => {
       <Hero />
       <JobiBox />
       <Features />
-      <CameraPanel />
+      <div id="camera-panel">
+        <CameraPanel />
+      </div>
+      <div id="ia-simulation">
+        <IASimulation />
+      </div>
       <Technology />
       <Recruiter />
       <FindJobiBox />
