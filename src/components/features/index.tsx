@@ -2,6 +2,7 @@ import { component$ } from "@builder.io/qwik";
 
 import "./index.scss";
 import iaImg from "../../assets/ia.avif";
+import cvImg from "../../assets/ia-cv.png";
 import womanImg from "../../assets/woman.avif";
 import jobissimImg from "../../assets/offers.avif";
 import { ArrowRight } from "../common/Icons/ArrowRight";
@@ -13,7 +14,7 @@ export const Features = component$(() => {
         id="features"
         class="features-section flex min-h-screen items-center justify-center bg-gradient-to-br px-6 py-16"
       >
-        <div class="mx-auto w-full max-w-7xl rounded-3xl bg-[#EEF0FC] px-4 py-12 sm:px-8">
+        <div class="mx-auto w-full max-w-screen-2xl rounded-3xl bg-[#EEF0FC] px-4 py-12 sm:px-8">
           <div class="mb-16 text-center">
             <h1 class="mb-4 text-3xl text-[#2E104E] sm:text-5xl">
               Avec JobiBox:
@@ -26,7 +27,7 @@ export const Features = component$(() => {
             </p>
           </div>
 
-          <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
             <div class="bg1 group relative transform overflow-hidden rounded-3xl p-6 text-left text-white shadow-xl transition-all duration-300 hover:-translate-y-2 hover:scale-[1.02] hover:shadow-2xl">
               <div class="card-overlay absolute inset-0 transition-all duration-300 group-hover:bg-black/5"></div>
               <div class="relative z-10 flex h-full flex-col">
@@ -81,6 +82,43 @@ export const Features = component$(() => {
                       src={iaImg}
                       class="img-style h-auto w-full rounded-b-3xl object-contain"
                       alt="simulation"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg2 group relative transform overflow-hidden rounded-3xl p-6 text-left text-white shadow-xl transition-all duration-300 hover:-translate-y-2 hover:scale-[1.02] hover:shadow-2xl">
+              <div class="card-overlay absolute inset-0 transition-all duration-300 group-hover:bg-black/5"></div>
+
+              <div class="relative z-10 flex h-full flex-col">
+                <div class="mb-4 flex items-center justify-between">
+                  <h3 class="text-xl font-bold sm:text-2xl">
+                    CV optimisé par IA
+                  </h3>
+                  <ArrowRight />
+                </div>
+
+                <p class="leading-relaxed text-white/90">
+                  Créez un CV professionnel et percutant grâce à notre
+                  intelligence artificielle. Analyse de profil, reformulation
+                  intelligente et optimisation pour les recruteurs.
+                </p>
+
+                <div class="mt-8">
+                  <div class="mb-4 rounded-full bg-white px-3 py-2 sm:px-2 sm:py-4">
+                    <span class="text-[#2E104E]">
+                      ✨ Donnez plus d’impact à votre CV
+                    </span>
+                  </div>
+
+                  <div class="overflow-hidden">
+                    <img
+                      loading="lazy"
+                      decoding="async"
+                      src={cvImg}
+                      class="img-style h-auto w-full rounded-b-3xl object-contain"
+                      alt="CV généré par intelligence artificielle"
                     />
                   </div>
                 </div>
