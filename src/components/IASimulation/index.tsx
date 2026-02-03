@@ -1,27 +1,27 @@
 import { component$ } from "@builder.io/qwik";
 
 import "./index.scss";
-import step1Img from "~/assets/IASimulation/step1.webp";
-import step2Img from "~/assets/IASimulation/step2.webp";
-import step3Img from "~/assets/IASimulation/step3.webp";
+import levels from "~/assets/IASimulation/levels.avif";
+import interview from "~/assets/IASimulation/interview.png";
+import score from "~/assets/IASimulation/score.avif";
 
 export const IASimulation = component$(() => {
   const steps = [
     {
       index: 1,
-      img: step1Img,
+      img: levels,
       title: "Choisissez votre niveau",
       text: "Débutant, Intermédiaire ou Expert : adaptez la difficulté à votre expérience et vos objectifs de carrière.",
     },
     {
       index: 2,
-      img: step2Img,
+      img: interview,
       title: "Passez l'entretien en conditions réelles",
       text: "Face caméra, répondez aux questions de l'IA qui simule un vrai recruteur et analyse votre communication en temps réel.",
     },
     {
       index: 3,
-      img: step3Img,
+      img: score,
       title: "Progressez avec un feedback détaillé",
       text: "Obtenez votre score, découvrez les réponses attendues et identifiez vos axes d'amélioration.",
     },
@@ -50,7 +50,7 @@ export const IASimulation = component$(() => {
         {steps.map((step) => (
           <div class="step">
             <span class="step-index">{step.index}</span>
-            <h2>{step.title}</h2>
+            <h3>{step.title}</h3>
             <div class="step-details">
               <p>{step.text}</p>
             </div>

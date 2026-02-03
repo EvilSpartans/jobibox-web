@@ -6,6 +6,7 @@ import { JobiBox } from "~/components/jobiBox";
 import { Features } from "~/components/features";
 import { Recruiter } from "~/components/recruiter";
 import { JobiTruck } from "~/components/jobiTruck";
+import { IACVPaper } from "~/components/IACVPaper";
 import { Navbar } from "~/components/shared/navbar";
 import { Technology } from "~/components/technology";
 import { ClientList } from "~/components/clientList";
@@ -27,6 +28,9 @@ export const Home = component$(() => {
       </div>
       <div id="ia-simulation">
         <IASimulation />
+      </div>
+      <div id="ia-cv-paper">
+        <IACVPaper />
       </div>
       <Technology />
       <Recruiter />
