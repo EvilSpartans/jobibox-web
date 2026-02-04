@@ -30,9 +30,9 @@ export const IASimulation = component$(() => {
   return (
     <section
       id="ia-simulation"
-      class="content-panel flex min-h-screen flex-col items-center justify-center px-6 py-8 text-white md:py-8 lg:py-0 lg:pb-40"
+      class="content-panel flex min-h-screen flex-col items-center justify-center px-6 py-12 text-white md:py-8 lg:py-0 lg:pb-40"
     >
-      <div class="mx-auto max-w-7xl px-8 pt-10 text-center">
+      <div class="mx-auto max-w-7xl px-8 pt-14 text-center">
         <h1 class="my-6 text-3xl font-semibold md:text-6xl">
           Entraînez-vous grâce à la
         </h1>
@@ -46,7 +46,7 @@ export const IASimulation = component$(() => {
         </p>
       </div>
 
-      <div class="steps-flow mx-auto max-w-7xl px-8 pb-24">
+      <div class="steps-flow mx-auto max-w-7xl px-8">
         {steps.map((step) => (
           <div class="step">
             <span class="step-index">{step.index}</span>

@@ -106,9 +106,6 @@ export const IACVPaper = component$(() => {
 
               <div class="cvp-ai-overlay">
                 <div class="cvp-scan-line"></div>
-                <div class="cvp-zone cvp-zone-1"></div>
-                <div class="cvp-zone cvp-zone-2"></div>
-                <div class="cvp-zone cvp-zone-3"></div>
               </div>
             </div>
           </div>

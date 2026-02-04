@@ -3,6 +3,7 @@ import { component$ } from "@builder.io/qwik";
 import { Faq } from "~/components/faq";
 import { Hero } from "~/components/hero";
 import { JobiBox } from "~/components/jobiBox";
+import { FindJob } from "~/components/FindJob";
 import { Features } from "~/components/features";
 import { Recruiter } from "~/components/recruiter";
 import { JobiTruck } from "~/components/jobiTruck";
@@ -31,6 +32,9 @@ export const Home = component$(() => {
       </div>
       <div id="ia-cv-paper">
         <IACVPaper />
+      </div>
+      <div id="find-job">
+        <FindJob />
       </div>
       <Technology />
       <Recruiter />

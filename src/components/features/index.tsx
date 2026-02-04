@@ -132,7 +132,7 @@ export const Features = component$(() => {
               </div>
             </div>
 
-            <div class="bg3 group relative transform overflow-hidden rounded-3xl p-6 text-left text-white shadow-xl transition-all duration-300 hover:-translate-y-2 hover:scale-[1.02] hover:shadow-2xl">
+            <div onClick$={() => scrollTo("find-job")} class="bg3 group relative transform overflow-hidden rounded-3xl p-6 text-left text-white shadow-xl transition-all duration-300 hover:-translate-y-2 hover:scale-[1.02] hover:shadow-2xl">
               <div class="card-overlay absolute inset-0 transition-all duration-300 group-hover:bg-black/5"></div>
               <div class="relative z-10 flex h-full flex-col">
                 <div class="mb-4 flex items-center justify-between">
