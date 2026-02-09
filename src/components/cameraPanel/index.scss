@@ -25,6 +25,7 @@
   width: 100%;
   color: white;
   text-align: center;
+  font-family: "Manrope", sans-serif;
 }
 
 .options {
@@ -58,7 +59,7 @@
       text-align: left;
     }
 
-    .title {
+    .option-title {
       font-weight: 600;
       font-size: 1.125rem;
       margin-bottom: 0.3rem;
@@ -79,7 +80,7 @@
     &.selected {
       background-color: white;
 
-      .title {
+      .option-title {
         background: linear-gradient(
           90deg,
           #feb24c -14.28%,
@@ -268,7 +269,7 @@
       text-align: center;
     }
 
-    .title {
+    .option-title {
       font-size: 1rem;
     }
 

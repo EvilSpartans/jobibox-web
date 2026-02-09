@@ -30,17 +30,17 @@ export const IASimulation = component$(() => {
   return (
     <section
       id="ia-simulation"
-      class="content-panel flex min-h-screen flex-col items-center justify-center px-6 py-12 text-white md:py-8 lg:py-0 lg:pb-40"
+      class="flex min-h-screen flex-col items-center justify-center px-6 py-12 text-white md:py-8 lg:py-0 lg:pb-40"
     >
-      <div class="mx-auto max-w-7xl px-8 pt-14 text-center">
-        <h1 class="my-6 text-3xl font-semibold md:text-6xl">
+      <div class="mb-10 mx-auto max-w-7xl px-8 pt-14 text-center">
+        <h1 class="mb-4 text-3xl text-[#2E104E] ">
           Entraînez-vous grâce à la
         </h1>
-        <h1 class="instrument-serif-italic mb-6 text-4xl font-semibold md:text-6xl">
+        <h1 class="title mb-6 bg-clip-text text-3xl text-transparent italic sm:text-5xl md:text-[80px] md:leading-[1]">
           Simulation d'entretien avec IA
         </h1>
 
-        <p class="mb-6 text-xl font-light text-purple-200 md:text-2xl">
+        <p class="text-base text-[#2E104E] sm:text-lg">
           Passez des entretiens virtuels avec une IA et boostez vos
           performances.
         </p>
@@ -48,7 +48,7 @@ export const IASimulation = component$(() => {
 
       <div class="steps-flow mx-auto max-w-7xl px-8">
         {steps.map((step) => (
-          <div class="step">
+          <div class="content-panel step">
             <span class="step-index">{step.index}</span>
             <h3>{step.title}</h3>
             <div class="step-details">

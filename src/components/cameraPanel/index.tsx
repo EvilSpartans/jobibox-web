@@ -15,6 +15,12 @@ export const CameraPanel = component$(() => {
   return (
     <section id="cameraPanel" class="camera-panel">
       <div class="content">
+          <h1 class="my-6 text-2xl md:text-4xl">
+            Présentez votre parcours en vidéo 
+          </h1>
+          <h1 class="instrument-serif-italic mb-10 text-4xl font-semibold md:text-6xl">
+            et montrez votre personnalité au-delà du CV classique
+          </h1>
         <div class="options">
           {[
             {
@@ -40,7 +46,7 @@ export const CameraPanel = component$(() => {
             >
               <div class="icon">{item.icon}</div>
               <div class="text">
-                <p class="title">{item.title}</p>
+                <p class="option-title">{item.title}</p>
                 <p class="desc">{item.desc}</p>
               </div>
             </div>
