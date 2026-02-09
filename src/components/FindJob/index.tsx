@@ -65,7 +65,7 @@ const floatingJobs = [
         <div class="find-header">
           <span class="find-badge">
             <span class="pulse-dot"></span>
-            +200 offres actives aujourd'hui
+            +3 000 offres actives aujourd'hui
           </span>
 
           <h1 class="my-6 text-3xl font-semibold md:text-6xl">

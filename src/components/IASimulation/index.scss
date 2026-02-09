@@ -1,9 +1,24 @@
+section {
+  font-family: "Manrope", sans-serif;
+}
+
 .content-panel {
   font-family: "Manrope", sans-serif;
   background-image: url("../../assets/background-card-2.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+}
+
+.title {
+  font-family: "Instrument Serif", serif;
+  background-image: linear-gradient(
+    to right,
+    #feb24c,
+    #ff5c95,
+    #b638cf,
+    #7432f6
+  );
 }
 
 .steps-flow {
@@ -24,9 +39,7 @@
   min-height: 480px;
   padding: 2rem;
   border-radius: 20px;
-  background: rgba(255, 255, 255, 0.08);
   backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
   display: flex;
   flex-direction: column;
