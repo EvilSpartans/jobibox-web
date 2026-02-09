@@ -47,7 +47,10 @@
 .find-section {
   position: relative;
   font-family: "Manrope", sans-serif;
-  background: linear-gradient(180deg, #df826e 0%, #d44f9a 50%, #d44f9a 100%);
+  // background: linear-gradient(180deg, #df826e 0%, #d44f9a 50%, #d44f9a 100%);
+  background: linear-gradient(to bottom,
+        #4a4199,
+        #753985);
   overflow: hidden;
 }
 
