@@ -1,4 +1,4 @@
-import { component$ } from "@builder.io/qwik";
+import { $, component$ } from "@builder.io/qwik";
 
 import "./index.scss";
 import iaImg from "../../assets/ia.avif";
@@ -8,6 +8,10 @@ import jobissimImg from "../../assets/offers.avif";
 import { ArrowRight } from "../common/Icons/ArrowRight";
 
 export const Features = component$(() => {
+  const scrollTo = $((id: string) => {
+    const el = document.getElementById(id);
+    if (el) el.scrollIntoView({ behavior: "smooth" });
+  });
   return (
     <>
       <section
@@ -28,7 +32,10 @@ export const Features = component$(() => {
           </div>
 
           <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
-            <div class="bg1 group relative transform overflow-hidden rounded-3xl p-6 text-left text-white shadow-xl transition-all duration-300 hover:-translate-y-2 hover:scale-[1.02] hover:shadow-2xl">
+            <div
+              onClick$={() => scrollTo("camera-panel")}
+              class="bg1 group relative transform overflow-hidden rounded-3xl p-6 text-left text-white shadow-xl transition-all duration-300 hover:-translate-y-2 hover:scale-[1.02] hover:shadow-2xl"
+            >
               <div class="card-overlay absolute inset-0 transition-all duration-300 group-hover:bg-black/5"></div>
               <div class="relative z-10 flex h-full flex-col">
                 <div class="mb-4 flex items-center justify-between">
@@ -54,7 +61,7 @@ export const Features = component$(() => {
               </div>
             </div>
 
-            <div class="bg2 group relative transform overflow-hidden rounded-3xl p-6 text-left text-white shadow-xl transition-all duration-300 hover:-translate-y-2 hover:scale-[1.02] hover:shadow-2xl">
+            <div onClick$={() => scrollTo("ia-simulation")} class="bg2 group relative transform overflow-hidden rounded-3xl p-6 text-left text-white shadow-xl transition-all duration-300 hover:-translate-y-2 hover:scale-[1.02] hover:shadow-2xl">
               <div class="card-overlay absolute inset-0 transition-all duration-300 group-hover:bg-black/5"></div>
               <div class="relative z-10 flex h-full flex-col">
                 <div class="mb-4 flex items-center justify-between">
@@ -88,7 +95,7 @@ export const Features = component$(() => {
               </div>
             </div>
 
-            <div class="bg2 group relative transform overflow-hidden rounded-3xl p-6 text-left text-white shadow-xl transition-all duration-300 hover:-translate-y-2 hover:scale-[1.02] hover:shadow-2xl">
+            <div onClick$={() => scrollTo("ia-cv-paper")} class="bg2 group relative transform overflow-hidden rounded-3xl p-6 text-left text-white shadow-xl transition-all duration-300 hover:-translate-y-2 hover:scale-[1.02] hover:shadow-2xl">
               <div class="card-overlay absolute inset-0 transition-all duration-300 group-hover:bg-black/5"></div>
 
               <div class="relative z-10 flex h-full flex-col">
@@ -125,7 +132,7 @@ export const Features = component$(() => {
               </div>
             </div>
 
-            <div class="bg3 group relative transform overflow-hidden rounded-3xl p-6 text-left text-white shadow-xl transition-all duration-300 hover:-translate-y-2 hover:scale-[1.02] hover:shadow-2xl">
+            <div onClick$={() => scrollTo("find-job")} class="bg3 group relative transform overflow-hidden rounded-3xl p-6 text-left text-white shadow-xl transition-all duration-300 hover:-translate-y-2 hover:scale-[1.02] hover:shadow-2xl">
               <div class="card-overlay absolute inset-0 transition-all duration-300 group-hover:bg-black/5"></div>
               <div class="relative z-10 flex h-full flex-col">
                 <div class="mb-4 flex items-center justify-between">
