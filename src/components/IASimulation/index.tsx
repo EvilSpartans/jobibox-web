@@ -33,12 +33,12 @@ export const IASimulation = component$(() => {
       class="flex min-h-screen flex-col items-center justify-center px-6 py-12 text-white md:py-8 lg:py-0 lg:pb-40"
     >
       <div class="mb-10 mx-auto max-w-7xl px-8 pt-14 text-center">
-        <h1 class="mb-4 text-3xl text-[#2E104E] ">
+        <h2 class="mb-4 text-3xl text-[#2E104E] ">
           Entraînez-vous grâce à la
-        </h1>
-        <h1 class="title mb-6 bg-clip-text text-3xl text-transparent italic sm:text-5xl md:text-[80px] md:leading-[1]">
+        </h2>
+        <h2 class="title mb-6 bg-clip-text text-3xl text-transparent italic sm:text-5xl md:text-[80px] md:leading-[1]">
           Simulation d'entretien avec IA
-        </h1>
+        </h2>
 
         <p class="text-base text-[#2E104E] sm:text-lg">
           Passez des entretiens virtuels avec une IA et boostez vos

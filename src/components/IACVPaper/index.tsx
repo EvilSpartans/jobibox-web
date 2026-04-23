@@ -44,12 +44,12 @@ export const IACVPaper = component$(() => {
 
       <div class="cvp-content">
         <div class="cvp-header">
-          <h1 class="cvp-title">
+          <h2 class="cvp-title">
             Votre CV,{" "}
             <span class="cvp-title-gradient instrument-serif-italic">
               transformé par l'IA
             </span>
-          </h1>
+          </h2>
           <p class="cvp-subtitle">
             Analysez, optimisez et personnalisez votre CV avec l'IA vocale
           </p>
