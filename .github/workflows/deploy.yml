@@ -35,6 +35,20 @@ jobs:
       - name: Build app
         run: npm run build
 
+      - name: Normalize remote directory
+        id: normalize_dir
+        shell: bash
+        run: |
+          target_dir="${{ secrets.FTP_TARGET_DIR }}"
+          if [[ -z "$target_dir" ]]; then
+            echo "FTP_TARGET_DIR secret is empty"
+            exit 1
+          fi
+          if [[ "$target_dir" != */ ]]; then
+            target_dir="${target_dir}/"
+          fi
+          echo "server_dir=$target_dir" >> "$GITHUB_OUTPUT"
+
       - name: Deploy via FTPS
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
@@ -44,5 +58,5 @@ jobs:
           port: ${{ secrets.FTP_PORT }}
           protocol: ftps
           local-dir: dist/
-          server-dir: ${{ secrets.FTP_TARGET_DIR }}
+          server-dir: ${{ steps.normalize_dir.outputs.server_dir }}
           dangerous-clean-slate: false
