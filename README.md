@@ -50,10 +50,12 @@ Le repo inclut maintenant deux workflows:
   - Exécute les tests (`test`, actuellement basé sur le typecheck)
   - Compile le site (`build`)
   - Lance un audit sécurité runtime (`npm audit --omit=dev --audit-level=high`)
+  - Publie un artifact de build (`build-dist`) sur `push` vers `master`
 - `.github/workflows/deploy.yml`
   - Se déclenche uniquement si `CI` est vert
-  - Déploie automatiquement sur `master`
-  - Upload le dossier `dist/` en FTPS vers PlanetHoster
+  - Se lance uniquement pour les runs CI de `master`
+  - Récupère l'artifact `build-dist` produit par la CI
+  - Déploie le dossier `dist/` en FTPS vers PlanetHoster (sans rebuild)
 
 ### Secrets requis (GitHub Actions)
 
