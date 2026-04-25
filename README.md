@@ -58,7 +58,7 @@ Le repo inclut maintenant deux workflows:
 ### Secrets requis (GitHub Actions)
 
 - `FTP_HOST`
-- `FTP_USERNAME`
+- `FTP_USER`
 - `FTP_PASSWORD`
 - `FTP_PORT`
 - `FTP_TARGET_DIR` (ex: `/public_html/`)
