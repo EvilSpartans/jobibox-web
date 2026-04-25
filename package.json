@@ -21,6 +21,7 @@
     "lint": "eslint \"src/**/*.ts*\"",
     "preview": "qwik build preview && vite preview --open",
     "start": "vite --open --mode ssr",
+    "test": "npm run build.types",
     "qwik": "qwik"
   },
   "devDependencies": {
@@ -44,6 +45,6 @@
     "vite-tsconfig-paths": "^4.2.1"
   },
   "dependencies": {
-    "swiper": "^11.2.10"
+    "swiper": "^12.1.3"
   }
 }
