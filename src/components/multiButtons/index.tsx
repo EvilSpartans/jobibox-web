@@ -11,6 +11,8 @@ import { Screen } from "../common/Icons/Screen";
 import { Shield } from "../common/Icons/Shield";
 
 export const MultiButtons = component$(() => {
+  // DOM query + classList après montage ; alternatives Qwik moins adaptées ici
+  // eslint-disable-next-line qwik/no-use-visible-task
   useVisibleTask$(() => {
     const buttons = document.querySelectorAll(".button-card");
 

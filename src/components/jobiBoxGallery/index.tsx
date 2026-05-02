@@ -49,6 +49,8 @@ export const JobiGallery = component$(() => {
                   loading="lazy"
                   decoding="async"
                   alt={item.alt}
+                  width={384}
+                  height={384}
                   class="h-64 w-64 object-cover md:h-96 md:w-96"
                 />
                 <div

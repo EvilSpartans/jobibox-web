@@ -8,6 +8,8 @@ export const RouterHead = component$(() => {
   const head = useDocumentHead();
   const loc = useLocation();
 
+  // bascule media=print -> all sur les feuilles de style après hydratation
+  // eslint-disable-next-line qwik/no-use-visible-task
   useVisibleTask$(() => {
     const links = document.querySelectorAll(
       'link[rel="stylesheet"][media="print"]',

@@ -54,6 +54,8 @@ export const Features = component$(() => {
                     loading="lazy"
                     decoding="async"
                     src={womanImg}
+                    width={600}
+                    height={400}
                     class="img-style h-auto w-full rounded-b-3xl object-contain"
                     alt="feature"
                   />
@@ -87,6 +89,8 @@ export const Features = component$(() => {
                       loading="lazy"
                       decoding="async"
                       src={iaImg}
+                      width={600}
+                      height={400}
                       class="img-style h-auto w-full rounded-b-3xl object-contain"
                       alt="simulation"
                     />
@@ -124,6 +128,8 @@ export const Features = component$(() => {
                       loading="lazy"
                       decoding="async"
                       src={cvImg}
+                      width={600}
+                      height={400}
                       class="img-style h-auto w-full rounded-b-3xl object-contain"
                       alt="CV généré par intelligence artificielle"
                     />
@@ -152,6 +158,8 @@ export const Features = component$(() => {
                         loading="lazy"
                         decoding="async"
                         src={jobissimImg}
+                        width={600}
+                        height={400}
                         alt="job"
                         class="h-auto w-full rounded-3xl object-contain object-bottom"
                       />

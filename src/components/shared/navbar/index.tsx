@@ -6,6 +6,8 @@ export const Navbar = component$(() => {
   const isOpen = useSignal(false);
   const isScrolled = useSignal(false);
 
+  // scroll + clic document : nécessite le client
+  // eslint-disable-next-line qwik/no-use-visible-task
   useVisibleTask$(() => {
     const handleScroll = () => {
       isScrolled.value = window.scrollY > 50;

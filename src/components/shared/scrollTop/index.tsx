@@ -3,6 +3,8 @@ import { $, component$, useVisibleTask$, useSignal } from "@builder.io/qwik";
 export const ScrollTop = component$(() => {
   const showButton = useSignal(false);
 
+  // window.scrollY uniquement côté client
+  // eslint-disable-next-line qwik/no-use-visible-task
   useVisibleTask$(() => {
     const toggleVisibility = () => {
       showButton.value = window.scrollY > 300;

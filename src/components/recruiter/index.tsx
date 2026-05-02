@@ -36,6 +36,8 @@ export const Recruiter = component$(() => {
       <div class="relative w-full max-w-7xl px-8">
         <img
           src={videoImg}
+          width={1200}
+          height={675}
           class="block w-full rounded-2xl object-contain"
           loading="lazy"
           decoding="async"

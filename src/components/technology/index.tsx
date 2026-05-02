@@ -14,6 +14,8 @@ export const Technology = component$(() => {
   const videoRef = useSignal<HTMLVideoElement>();
   const submitContact = useSignal<null | (() => Promise<void>)>(null);
 
+  // pause vidéo sur ref DOM après fermeture du modal
+  // eslint-disable-next-line qwik/no-use-visible-task
   useVisibleTask$(({ track }) => {
     track(() => showVideoModal.value);
     if (!showVideoModal.value && videoRef.value) {
@@ -55,6 +57,8 @@ export const Technology = component$(() => {
             loading="lazy"
             decoding="async"
             alt="Vidéo démonstration JobiBox"
+            width={960}
+            height={540}
             class="h-80 w-full max-w-xs object-cover sm:max-w-sm md:h-120 md:max-w-md lg:h-160 lg:max-w-lg"
           />
 
@@ -62,7 +66,13 @@ export const Technology = component$(() => {
             class="absolute top-1/2 left-1/2 flex h-[135px] w-[135px] -translate-x-1/2 -translate-y-1/2 cursor-pointer items-center justify-center rounded-full bg-[#2E104E] transition-all duration-300 ease-in-out hover:bg-[#6626AA]"
             onClick$={() => (showVideoModal.value = true)}
           >
-            <img src={frame} alt="Lecture" class="h-full w-full p-8" />
+            <img
+              src={frame}
+              alt="Lecture"
+              width={135}
+              height={135}
+              class="h-full w-full p-8"
+            />
           </div>
         </div>
 

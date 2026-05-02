@@ -31,6 +31,7 @@ export const ContactForm = component$(
     const submitting = useSignal(false);
 
     const successMessage = useSignal("");
+    const errorMessage = useSignal("");
     const invalid = useComputed$(() => ({
       email: !required(form.value.email) || !isEmail(form.value.email),
       subject: !required(form.value.subject),
@@ -50,6 +51,7 @@ export const ContactForm = component$(
       if (hasErrors.value) return;
 
       submitting.value = true;
+      errorMessage.value = "";
       try {
         const saved = await ContactService.createItem(form.value);
         await onValidSubmit$?.(saved);
@@ -61,6 +63,8 @@ export const ContactForm = component$(
         touched.value = {};
       } catch (e) {
         console.error("Erreur envoi contact:", e);
+        errorMessage.value = "Erreur lors de l'envoi du message";
+        setTimeout(() => (errorMessage.value = ""), 4000);
       } finally {
         submitting.value = false;
       }
@@ -153,6 +157,10 @@ export const ContactForm = component$(
 
         {successMessage.value && (
           <p class="mt-4 text-sm text-green-600">{successMessage.value}</p>
+        )}
+
+        {errorMessage.value && (
+          <p class="mt-4 text-sm text-red-600">{errorMessage.value}</p>
         )}
       </form>
     );

@@ -48,6 +48,8 @@ export const JobiBox = component$(() => {
               decoding="async"
               src={jobiboxImg}
               alt="JobiBox"
+              width={800}
+              height={800}
               class="h-auto w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg"
             />
           </div>

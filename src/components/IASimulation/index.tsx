@@ -48,7 +48,7 @@ export const IASimulation = component$(() => {
 
       <div class="steps-flow mx-auto max-w-7xl px-8">
         {steps.map((step) => (
-          <div class="content-panel step">
+          <div key={step.index} class="content-panel step">
             <span class="step-index">{step.index}</span>
             <h3>{step.title}</h3>
             <div class="step-details">
@@ -57,6 +57,8 @@ export const IASimulation = component$(() => {
             <img
               src={step.img}
               alt={step.title}
+              width={800}
+              height={520}
               class="step-image"
               loading="lazy"
             />

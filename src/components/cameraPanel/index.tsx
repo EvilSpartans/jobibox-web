@@ -57,7 +57,13 @@ export const CameraPanel = component$(() => {
           <div class="camera-mockup">
             <div class="lens"></div>
 
-            <img src={imageGirl} alt="portrait" class="girl-img" />
+            <img
+              src={imageGirl}
+              alt="portrait"
+              width={640}
+              height={480}
+              class="girl-img"
+            />
             <span class="card-text card-top-left">
               Pouvez-vous vous présenter ?
             </span>
@@ -78,16 +84,46 @@ export const CameraPanel = component$(() => {
           <div class="camera-mockup">
             <div class="lens"></div>
 
-            <img src={imageGirl} alt="portrait" class="girl-img" />
-            <img src={card1} class="card card1" alt="bg1" />
-            <img src={card2} class="card card2" alt="bg2" />
-            <img src={card3} class="card card3" alt="bg3" />
+            <img
+              src={imageGirl}
+              alt="portrait"
+              width={640}
+              height={480}
+              class="girl-img"
+            />
+            <img
+              src={card1}
+              class="card card1"
+              alt="bg1"
+              width={320}
+              height={200}
+            />
+            <img
+              src={card2}
+              class="card card2"
+              alt="bg2"
+              width={320}
+              height={200}
+            />
+            <img
+              src={card3}
+              class="card card3"
+              alt="bg3"
+              width={320}
+              height={200}
+            />
           </div>
         ) : (
           <div class="camera-mockup">
             <div class="lens"></div>
 
-            <img src={imageGirl} alt="portrait" class="girl-img" />
+            <img
+              src={imageGirl}
+              alt="portrait"
+              width={640}
+              height={480}
+              class="girl-img"
+            />
             <span class="card-text card1">💡 Curieux.se</span>
             <span class="card-text card2">💪 Autonome</span>
             <span class="card-text card3">💬 Bonne communication</span>
