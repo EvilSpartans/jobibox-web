@@ -2,7 +2,7 @@ import { component$ } from "@builder.io/qwik";
 
 import "./index.scss";
 import levels from "~/assets/IASimulation/levels.avif";
-import interview from "~/assets/IASimulation/interview.png";
+import interview from "~/assets/IASimulation/interview.avif";
 import score from "~/assets/IASimulation/score.avif";
 
 export const IASimulation = component$(() => {
